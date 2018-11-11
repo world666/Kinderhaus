@@ -1,0 +1,12 @@
+/* CSS-Definitionsdatei, die SiteStyle -Stylesheets enthält */
+BODY { font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif; background-image: url("./assets/images/background.jpg");}
+ .TextObject { font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif;}
+ H1 { font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif;}
+ H2 { font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif;}
+ P { font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif; font-size: x-small;}
+ H3 { font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif;}
+ H4 { font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif;}
+ .TextNavBar { font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif; font-size: small; font-weight: bold;}
+ H5 { font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif;}
+ H6 { font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif;}
+ 
