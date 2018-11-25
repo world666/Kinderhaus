@@ -1,0 +1,92 @@
+html {
+	width: 100%;
+}
+
+body {
+	width: 100%;
+}
+.lead{
+	font-size: large;
+}
+.liste{
+	/*font-style: oblique;*/
+	font-size: large;
+}
+.p_own{
+	font-size: large;
+}
+ul{
+	padding-top: 0 px;
+	list-style-image: url("../img/list.svg");
+}
+h2{
+	color: #9BCA3B;
+}
+em{
+	color: #9BCA3B;
+}
+.img_konzept{
+	float: right;
+	width: 100%;
+	margin: 0 0 10px 20px;
+    padding: 0;
+
+}
+
+.navbar > .container {
+    text-align: center;
+	background-color: #fafafa;
+	float: none;
+ }
+ .navbar-header {
+	border:none;
+    float: none;
+ }
+ .navbar-brand {
+    float: none;
+    display: inline-block;
+ }
+ .navbar .navbar-nav {
+    float: none;
+    display: inline-block;
+    clear: none;
+ }
+ .navbar .navbar-nav > li {
+    float: none;
+    display: inline-block;
+ }
+ .navbar .navbar-nav > li li {
+    text-align: left
+ }
+ /*add id of centerednav on the collapse or it won't work*/
+ .collapse.navbar-collapse#centerednav {
+    float: none;
+    display: inline-block!important;
+    width: auto;
+    clear: none;
+	margin-top: 0px;
+ }
+ .navbar-default{
+	 border:none;
+ }
+ footer{
+	 background-color: #fafafa;
+	 border-top: 1px solid #eeeeee;
+ }
+#map-container { height: 200px }
+/*.bottom_text{
+	position:absolute;
+bottom:0;
+}*/
+.row{
+	padding-bottom: 25px;
+}
+.lead{
+	text-align: justify;
+}
+
+
+
+
+
+
