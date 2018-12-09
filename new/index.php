@@ -28,7 +28,8 @@
 	<body>
 	
 		<?php
-			include('header.html');
+			$home_active = "active";
+			include('header.php');
 		?>
 		
 		<div class="container pad_seite">

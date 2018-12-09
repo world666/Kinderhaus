@@ -10,10 +10,10 @@
 			</button>
 			<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 				<ul class="navbar-nav">
-					<li class="nav-item active">
-						<a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+					<li class="nav-item <?php echo $home_active; ?>">
+						<a class="nav-link" href="index.php">Home</a>
 					</li>				
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown <?php echo $about_active; ?>">
 						<a class="nav-link dropdown-toggle" href="unsere_gruppe.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Über uns</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="unsere_gruppe.php">Unsere Gruppe</a>
@@ -22,7 +22,7 @@
 							<a class="dropdown-item" href="unsere_team.php">Unsere Team</a>
 						</div>
 					 </li>
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown <?php echo $work_active; ?>">
 						<a class="nav-link dropdown-toggle" href="unser_tagesablauf.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wie wir arbeiten</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="unser_tagesablauf.php">Unser Tagesablauf</a>
@@ -31,7 +31,7 @@
 							<a class="dropdown-item" href="feste.php">Feste</a>
 						</div>
 					 </li>					
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown <?php echo $parents_active; ?>">
 						<a class="nav-link dropdown-toggle" href="verein.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Elterninitiative</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="verein.php">Der Verein</a>
@@ -39,13 +39,13 @@
 						</div>
 					 </li>	
 					
-					<li class="nav-item">
+					<li class="nav-item <?php echo $payments_active; ?>">
 						<a class="nav-link" href="beitrag.php">Beiträge</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item <?php echo $promotion_active; ?>">
 						<a class="nav-link" href="forder.php">Förderer</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item <?php echo $contacts_active; ?>">
 						<a class="nav-link" href="adresse.php">Kontakt</a>
 					</li>
 				</ul>
