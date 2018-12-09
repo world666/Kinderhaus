@@ -5,13 +5,41 @@ html {
 body {
 	width: 100%;
 }
-.lead{
-	font-size: large;
+
+ .pad_seite{
+	margin-top: 2em;
 }
+
+
+.navbar .active{
+	background-color: #9BCA3B;
+	color: #fff;
+}
+.navbar.navbar-light .dropdown-menu {
+  background-color: #f7f8f9;
+  border: none;
+}
+
+
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #9BCA3B;
+}
+
 .liste{
-	/*font-style: oblique;*/
-	font-size: large;
+	font-style: oblique;
+	color: #333333;
+	font-size: medium;
+   font-weight: 300;
 }
+.zeit{
+	color: #333333;
+	font-size: large;
+    font-weight: 300;
+}
+
 .p_own{
 	font-size: large;
 }
@@ -22,31 +50,36 @@ ul{
 h2{
 	color: #9BCA3B;
 }
+h4{
+	font-weight: 500;
+}
 em{
 	color: #9BCA3B;
+}
+dt{
+	font-weight: 500;
 }
 .img_konzept{
 	float: right;
 	width: 100%;
-	margin: 0 0 10px 20px;
+	margin: 0 0 1em 2em;
     padding: 0;
 
 }
- footer{
+ .footer-own{
 	 background-color: #fafafa;
-	 border-top: 1px solid #eeeeee;
+	 border-top: 1em solid #eeeeee;
  }
-#map-container { height: 200px }
-/*.bottom_text{
-	position:absolute;
-bottom:0;
-}*/
-.row{
-	padding-bottom: 25px;
+.row_pad{
+	padding-bottom: 2em;
 }
 .lead{
 	text-align: justify;
 }
+.footer_herf{
+	color: #9BCA3B;
+}
+
 
 
 

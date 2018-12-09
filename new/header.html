@@ -1,48 +1,55 @@
 <div style="padding: 0" class="container">
-	<img src="img/kindergarten_1.jpg" width="100%" class="img-fluid mx-auto" alt="Header">
-	<div class="navbar navbar-default navbar-fixed" role="navigation">  <!-- Панель меню фиксированная и налагается на текст -->
+	<img src="img/kindergarten_1.jpg" class="img-fluid  max-width: 100%" alt="Header">
+</div>
+<div style="padding: 0" class="container-fluid">
+	<nav class="navbar navbar-expand-md navbar-light bg-light fixed blog-nav">  <!-- Панель меню фиксированная и налагается на текст -->
 		<div class="container">
-			<div class="navbar-header">  <!-- ?????? -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar icon-bar-own"></span> <!--Полоски на кноке-->
-					<span class="icon-bar icon-bar-own"></span>
-					<span class="icon-bar icon-bar-own"></span>
-				</button>
-			</div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li class="dropdown">
-						<a href="unsere_gruppe.html" class="dropdown-toggle" data-toggle="dropdown">Über uns<b class="caret"></b></a>
-						 <ul class="dropdown-menu">
-							<li><a href="unsere_gruppe.html">Unsere Gruppe</a></li>
-							<li><a href="oeffnungszeiten.html">Öffnungszeiten</a></li>
-							<li><a href="unsere_raeume.html">Unsere Räume</a></li>
-							<li><a href="unsere_team.html">Unsere Team</a></li>
-						</ul>
+			<a class="navbar-brand" href="index.php" style="color: #ef61a3;">Kinderhaus</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+					</li>				
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="unsere_gruppe.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Über uns</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="unsere_gruppe.php">Unsere Gruppe</a>
+							<a class="dropdown-item" href="oeffnungszeiten.php">Öffnungszeiten</a>
+							<a class="dropdown-item" href="unsere_raeume.php">Unsere Räume</a>
+							<a class="dropdown-item" href="unsere_team.php">Unsere Team</a>
+						</div>
+					 </li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="unser_tagesablauf.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wie wir arbeiten</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="unser_tagesablauf.php">Unser Tagesablauf</a>
+							<a class="dropdown-item" href="aktivitaeten.php">Aktivitäten</a>
+							<a class="dropdown-item" href="konzept.php">Konzept</a>
+							<a class="dropdown-item" href="feste.php">Feste</a>
+						</div>
+					 </li>					
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="verein.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Elterninitiative</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="verein.php">Der Verein</a>
+							<a class="dropdown-item" href="mitarbeit.php">Elternmitarbeit</a>
+						</div>
+					 </li>	
+					
+					<li class="nav-item">
+						<a class="nav-link" href="beitrag.php">Beiträge</a>
 					</li>
-					<li class="dropdown">
-						<a href="unser_tagesablauf.html" class="dropdown-toggle" data-toggle="dropdown">Wie wir arbeiten<b class="caret"></b></a>
-						  <ul class="dropdown-menu">
-							<li><a href="unser_tagesablauf.html">Unser Tagesablauf</a></li>
-							<li><a href="aktivitaeten.html">Aktivitäten</a></li>
-							<li><a href="konzept.html">Konzept</a></li>
-							<li><a href="feste.html">Feste</a></li>
-						  </ul>
-						</li>
-					<li class="dropdown">
-						<a href="verein.html" class="dropdown-toggle" data-toggle="dropdown">Elterninitiative<b class="caret"></b></a>
-						  <ul class="dropdown-menu">
-							<li><a href="verein.html">Der Verein</a></li>
-							<li><a href="mitarbeit.html">Elternmitarbeit</a></li>
-						  </ul>
+					<li class="nav-item">
+						<a class="nav-link" href="forder.php">Förderer</a>
 					</li>
-					<li><a href="beitrag.html">Beiträge</a></li>
-					<li><a href="forder.html">Förderer</a></li>
-					<li><a href="adresse.html">Kontakt</a></li>
+					<li class="nav-item">
+						<a class="nav-link" href="adresse.php">Kontakt</a>
+					</li>
 				</ul>
 			</div><!--/.nav-collapse -->
-		</div>
-	</div>
+	    </div>
+	</nav>
 </div>
