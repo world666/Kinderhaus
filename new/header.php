@@ -2,7 +2,7 @@
 	<img src="img/kindergarten_1.jpg" class="img-fluid  max-width: 100%" alt="Header">
 </div>
 <div style="padding: 0" class="container-fluid">
-	<nav class="navbar navbar-expand-md navbar-light bg-light fixed blog-nav">  <!-- Панель меню фиксированная и налагается на текст -->
+	<nav class="navbar navbar-expand-md navbar-light bg-light fixed blog-nav" style="padding-top: 0; padding-bottom: 0">  <!-- Панель меню фиксированная и налагается на текст -->
 		<div class="container">
 			<a class="navbar-brand" href="index.php" style="color: #ef61a3;">Kinderhaus</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
