@@ -26,24 +26,42 @@
 	<body>
 	
 		<?php
-			include('header.html');
+			$about_active = "active";
+			include('header.php');
 		?>
 		
 		<div class="container pad_seite">
-			<h2>Elternmitarbeit</h2>
+			<h2>Unsere Räume</h2>
 		</div>
-		<div class="container pad_seite" style="padding-bottom: 2em;">
-			<p class="lead">Als selbstverwalteter Verein sind wir auf Initiative und tatkräftige Unterstützung unserer Mitglieder – der Eltern – angewiesen. Die Elternmitarbeit kann bei uns zum Beispiel bedeuten: 
+		<div class="container pad_seite">
+			<div class = "row row_pad">	
+				<div class="col-md-8">
+				<p class="lead">Seit 1994 ist das Kinderhaus in der Hainstraße 10, im Fachwerkhaus gegenüber der Hauptpost untergebracht. Von hier aus sind Parks und Spielplätze der Stadt sowie die Fuldawiesen schnell zu Fuß zu erreichen.
+				</p>
+				<p class="lead"> Uns steht eine große Altbauwohnung im Erdgeschoss des Hauses zur Verfügung. Die Räume sind hell, freundlich gestaltet und nach Funktion und Art der Aktivitäten aufgeteilt:
 				<ul class="liste">
-					<li>Übernahme von Ämtern</li>
-					<li>Unterstützung der Erzieherinnen im Krankheitsfall</li>
-					<li>Organisation von Festen und Ausflügen</li>
-					<li>Je nach Bedarf Übernahme verschiedener Aufgaben im und um das Haus: Putzdienste, Kochen von Mahlzeiten, Wasch- und Einkaufsdienste, Gartenpflege, Renovierung und Instandhaltung der Räume </li>
+					<li>Eingangs- und Garderobenbereich</li>
+					<li>Ess- und Gruppenraum</li>
+					<li>Spielraum</li>
+					<li>Tobezimmer</li>
+					<li>Kuschelzimmer</li>
+					<li>Spielraum</li>
+					<li>Ruhe- und Wickelraum</li>
+					<li>Küche</li>
+					<li>Toiletten- und Waschraum</li>
 				</ul>
-			</p>
-			<p class="lead">
-				Alle Aufgaben werden von den Eltern abwechselnd übernommen, sodass sich der Zeitaufwand für jede einzelne Familie in Grenzen hält. Durchschnittlich kann man von ca. 15-20 Stunden Mitarbeit pro Jahr und Familie ausgehen.
-			</p>
+				</p>
+				<p class="lead">Draußen im Hof steht uns ein Stück Garten zur Verfügung, das wir Eltern zum Spielplatz umgebaut haben: mit einem großen Sandkasten und vielen anderen Spielgeräten.
+				</p>
+				<img  src="img/unsere_raeume/raum2.png"  width="49%" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Raum 2" >
+				<img  src="img/unsere_raeume/raum3.png"  width="49%" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Raum 3" >
+			 </div>
+				<div class="col-md-4 ">
+					<img  src="img/unsere_raeume/raum1.png"  width="100%" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Raum 1" ><br><br>
+					<img  src="img/unsere_raeume/raum2.png"  width="100%" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Raum 2" ><br><br>
+					<img  src="img/unsere_raeume/raum3.png"  width="100%" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Raum 3" >
+				</div>
+			</div>
 		</div>
 	
 		<!-- FOOTER -->

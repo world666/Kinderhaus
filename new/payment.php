@@ -26,7 +26,8 @@
 	<body>
 	
 		<?php
-			include('header.html');
+			$payments_active = "active";
+			include('header.php');
 		?>
 		
 		<div class="container pad_seite">

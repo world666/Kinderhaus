@@ -26,7 +26,8 @@
 	<body>
 	
 		<?php
-			include('header.html');
+			$parents_active = "active";
+			include('header.php');
 		?>
 		
 		<div class="container pad_seite">

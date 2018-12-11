@@ -26,7 +26,7 @@
 	<body>
 	
 		<?php
-			include('header.html');
+			include('header.php');
 		?>
 		
 		<div class="container pad_seite">

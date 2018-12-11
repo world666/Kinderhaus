@@ -26,29 +26,32 @@
 	<body>
 	
 		<?php
-			include('header.html');
+			$parents_active = "active";
+			include('header.php');
 		?>
 		
 		<div class="container pad_seite">
-			<h2>Unser Tagesablaug</h2>
+			<h2>Elternmitarbeit</h2>
 		</div>
 		<div class="container pad_seite" style="padding-bottom: 2em;">
-			<p class="lead"> 
-				<span class="glyphicon glyphicon-time"></span> 
-				Unser Kindergarten öffnet um 7.30 Uhr. 
+			<p class="lead">Als selbstverwalteter Verein sind wir auf Initiative und tatkräftige Unterstützung unserer Mitglieder – der Eltern – angewiesen. Die Elternmitarbeit kann bei uns zum Beispiel bedeuten: 
+				<ul class="liste">
+					<li>Übernahme von Ämtern</li>
+					<li>Unterstützung der Erzieherinnen im Krankheitsfall</li>
+					<li>Organisation von Festen und Ausflügen</li>
+					<li>Je nach Bedarf Übernahme verschiedener Aufgaben im und um das Haus: Putzdienste, Kochen von Mahlzeiten, Wasch- und Einkaufsdienste, Gartenpflege, Renovierung und Instandhaltung der Räume </li>
+				</ul>
 			</p>
-			<p class="lead">Bis zum Frühstück um 9.00 Uhr ist  <em>Freispielzeit</em>. Die Kinder können sich in dieser Zeit selbstständig das Spielmaterial und den/die Spielpartner aussuchen und alle Räume des Kinderhauses nutzen. Die Erzieherinnen begleiten die Freispielzeit durch aktives Mitspielen, durch individuelle Förderung und durch zusätzliche Angebote. </p>
-			<p class="lead">Zum gemeinsamen <em>Frühstück</em> versammeln wir uns um 9.00 Uhr an den beiden Gruppentischen. Nach dem Frühstück erhalten unsere Kinder noch einmal Zeit für das Freispiel, bevor um 10.00 Uhr mit dem <em>Angebot</em> begonnen wird. Zum jeweils aktuellen Projektthema finden verschiedene Aktionen statt. Es wird gebastelt, musiziert oder die Kinder treffen sich zum gemeinsamen Austausch im Sitzkreis.</p>
-			<p class="lead">Wann immer es das Wetter zulässt, verbringen wir viel <em>Zeit im Freien</em>. Dafür nutzen wir unsere Außenanlage oder gehen mit unseren Bollerwagen auf Tour. </p>
-			<p class="lead">Um 12.30 Uhr findet dienstags und donnerstags für die Essenskinder das gemeinsame <em>Mittagessen</em> statt. Unsere Kleinen gehen im Anschluss in den Schlafraum, wo sie bei leiser Musik und nach dem Vorlesen einer Geschichte ruhen oder schlafen können. Die Größeren suchen sich während der <em>Ruhezeit</em> von 13.30 - 14.30 Uhr eine leise Beschäftigung. </p>
-			<p class="lead">Die <em>Abholzeiten</em> richten sich individuell nach den Bedürfnissen der Eltern. Es besteht die Möglichkeit, die Kinder vor oder unmittelbar nach dem Mittagessen oder nach Ende der Ruhezeit abzuholen.</p>
+			<p class="lead">
+				Alle Aufgaben werden von den Eltern abwechselnd übernommen, sodass sich der Zeitaufwand für jede einzelne Familie in Grenzen hält. Durchschnittlich kann man von ca. 15-20 Stunden Mitarbeit pro Jahr und Familie ausgehen.
+			</p>
 		</div>
 	
 		<!-- FOOTER -->
 		<?php
 			include('footer.html');
 		?>
-		
+	
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 		<script src="../../new/assets/js/vendor/popper.min.js"></script>

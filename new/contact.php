@@ -28,7 +28,8 @@
 	<body>
 	
 		<?php
-			include('header.html');
+			$contacts_active = "active";
+			include('header.php');
 		?>
 		
 		<div class="container pad_seite">
@@ -46,7 +47,12 @@
 					  <a href="mailto:#"> info@kinderhaus-hersfeld.de</a>
 					</address>
 				</div>
-				<div id="map" class="col-md-8" style="width:100%;height:250px;"></div><br>
+				<div class="google-map col-md-8">
+					<div style="width: 100%;">
+						<iframe src="https://maps.google.com/maps?width=700&amp;height=250&amp;hl=en&amp;q=hainstrasse%2010%2C%20Bad%20Hersfeld%2C%20Germany+(Titel)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+					</div>
+				</div>
+				<br>
 			</div>
 			<p class="lead"><span style="color: #9BCA3B;">Öffnungszeiten:</span> täglich 7.30-14.30 Uhr<br>
 				<span style="font-size:small;">Außerhalb der Öffnungszeiten erreichen Sie uns unter der <abbr title="Phone">Tel.:</abbr> (06621) 794490 <span>
@@ -76,10 +82,7 @@
 		<?php
 			include('footer.html');
 		?>
-	
-
-		<script src="http://maps.google.com/maps/api/js?key=YOUR_API_KEY"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.js"></script>
+		
 		<script src="js/script.js"></script>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

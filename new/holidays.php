@@ -26,15 +26,32 @@
 	<body>
 	
 		<?php
-			include('header.html');
+			$work_active = "active";
+			include('header.php');
 		?>
 		
 		<div class="container pad_seite">
-			<h2>Unsere Förderer</h2>
+			<h2>Feste und Feiern</h2>
 		</div>
 		<div class="container pad_seite" style="padding-bottom: 2em;">
-			<p class="lead">Als gemeinnützige Einrichtung suchen wir immer wieder Personen und Firmen, die bereit sind, uns mit Geld- oder Sachspenden zu unterstützen. Natürlich stellen wir Ihnen eine Spendenquittung aus, und da das Kinderhaus eine gemeinnützige Einrichtung ist, können Sie diese steuerlich geltend machen.</p>
-			<p class="lead">In diesem Bereich unserer Internetseite sehen wir für jeden unserer Förderer einen Eintrag vor, mit dem wir uns öffentlich für die Unterstützung bedanken möchten. Ganz nach dem Motto: Sie tun Gutes und wir reden darüber!</p>
+			<p class="lead" style="font-style: oblique;">Im Kinderhaus feiern wir regelmäßig folgende Feste:
+				<dl class="lead" >
+					<dt style="text-align: left;">Kindergeburtstage</dt>
+					<dd>An diesem Tag steht das Geburtstagskind im Mittelpunkt. Wir feiern mit Spielen und einem gemeinsamen Geburtstagsfrühstück.</dd>
+					<dt style="text-align: left;">Fasching</dt>
+					<dd>Vor unserem Faschingsfest basteln wir, um das Kinderhaus für unser Faschingsfest zu dekorieren. Am Rosenmontag erscheinen wir verkleidet im Kinderhaus und feiern den Tag mit tollen Spielen.</dd>
+					<dt style="text-align: left;">Ostern</dt>
+					<dd>Wir basteln für Ostern und veranstalten einen ganztägiger Ausflug mit Ostereiersuche</dd>
+					<dt style="text-align: left;">Sommerfest in Licherode</dt>
+					<dd>Seit vielen Jahren ist unser Sommerfest in Licherode Tradition. An einem Sommerwochenende übernachten wir gemeinsam mit der ganzen Familie im Ökologischen Schullandheim. Wir haben Zeit für Spiele, zum Wandern, Grillen und um die Schulanfänger zu verabschieden.</dd>
+					<dt style="text-align: left;">Laternenfest</dt>
+					<dd>Am Martinstag laufen wir mit unseren selbst gebastelten Laternen durch den Wald oder durch die Stadt. Anschließend gibt es ein leckeres gemeinsames Abendessen.</dd>
+					<dt style="text-align: left;">Weihnachtsfeier</dt>
+					<dd>Kinder und Erzieherinnen gestalten ein Fest mit verschiedenen Darbietungen. Die zuvor im Kinderhaus gebackenen Plätzchen dürfen nun probiert werden. Für Herzhaftes wird auch gesorgt. Gegen Abend kommt dann der Weihnachtsmann...</dd>
+					<dt style="text-align: left;">Übernachtung im Kinderhaus</dt>
+					<dd>Einmal im Jahr übernachten die Kinder im Kinderhaus. Wir kochen etwas Leckeres und machen anschließend eine kleine „Nachtwanderung“.</dd>
+				</dl>
+			</p>
 		</div>
 	
 		<!-- FOOTER -->
