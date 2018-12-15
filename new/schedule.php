@@ -13,6 +13,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet"> 	<!-- ?????Нужно свой файл создавать или подключить bootstrap css?????? -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +36,7 @@
 		</div>
 		<div class="container pad_seite" style="padding-bottom: 2em;">
 			<p class="lead"> 
-				<span class="glyphicon glyphicon-time"></span> 
+				<span style="color: #9BCA3B;" class="fas fa-clock"></span> 
 				Unser Kindergarten öffnet um 7.30 Uhr. 
 			</p>
 			<p class="lead">Bis zum Frühstück um 9.00 Uhr ist  <em>Freispielzeit</em>. Die Kinder können sich in dieser Zeit selbstständig das Spielmaterial und den/die Spielpartner aussuchen und alle Räume des Kinderhauses nutzen. Die Erzieherinnen begleiten die Freispielzeit durch aktives Mitspielen, durch individuelle Förderung und durch zusätzliche Angebote. </p>

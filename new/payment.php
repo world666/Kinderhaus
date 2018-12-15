@@ -13,6 +13,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet"> 	<!-- ?????Нужно свой файл создавать или подключить bootstrap css?????? -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +36,7 @@
 		</div>
 		<div class="container pad_seite" style="padding-bottom: 2em;">
 			<p class="lead"> 
-				<span class="glyphicon glyphicon-euro"></span> 
+				<span style="color: #9BCA3B;" class="fas fa-euro-sign"></span> 
 				Der einheitliche monatliche Beitrag beträgt zur Zeit <em>160 Euro pro Kind</em>.
 				<br><span style="font-size: small;">Die Kosten für das Mittagessen sind in diesem Betrag nicht enthalten. </pan>
 			</p>

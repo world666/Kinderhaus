@@ -5,7 +5,10 @@ html {
 body {
 	width: 100%;
 }
-
+ .header-own{
+	 background-color: #fafafa;
+	 border-top: 1em solid #eeeeee;
+ }
  .pad_seite{
 	margin-top: 2em;
 }
@@ -13,10 +16,11 @@ button.navbar-toggler {
 	outline-color: #9BCA3B;
 }
 
-nav{
+.navbar{
 	line-height: 2.5;
-}
+	 font-size: 1.2em !important; 
 
+}
 
 .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active{
 	font-weight: 600;
@@ -27,7 +31,9 @@ nav{
   background-color: #f7f8f9;
   border: none;
 }
-
+.dropdown-item{
+	color: rgba(0, 0, 0, 0.5);
+}
 .dropdown-item.active, .dropdown-item:active {
 	font-weight: 600;
 	color: #9BCA3B;

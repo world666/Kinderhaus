@@ -15,6 +15,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet"> 	<!-- ?????Нужно свой файл создавать или подключить bootstrap css?????? -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,6 +23,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<link rel="stylesheet" href="css/animate.css">
   </head>
   
   
@@ -43,38 +45,22 @@
 					  <strong>Das Kinderhaus</strong><br>
 					  Hainstraße 10<br>
 					  36251, Bad Hersfeld<br>
-					  <abbr title="Phone">Tel.:</abbr> (06621) 74443<br>
-					  <a href="mailto:#"> info@kinderhaus-hersfeld.de</a>
+					 <span class="fas fa-phone"></span>  (06621) 74443<br>
+					 <span class="fas fa-envelope"></span><a href="mailto:info@kinderhaus-hersfeld.de"> info@kinderhaus-hersfeld.de</a>
 					</address>
 				</div>
 				<div class="google-map col-md-8">
-					<div style="width: 100%;">
-						<iframe src="https://maps.google.com/maps?width=700&amp;height=250&amp;hl=en&amp;q=hainstrasse%2010%2C%20Bad%20Hersfeld%2C%20Germany+(Titel)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+					<div>
+						<iframe width="100%" height="250 px" src="https://maps.google.com/maps?width=700&amp;height=250&amp;hl=en&amp;q=hainstrasse%2010%2C%20Bad%20Hersfeld%2C%20Germany+(Titel)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 					</div>
 				</div>
 				<br>
 			</div>
-			<p class="lead"><span style="color: #9BCA3B;">Öffnungszeiten:</span> täglich 7.30-14.30 Uhr<br>
-				<span style="font-size:small;">Außerhalb der Öffnungszeiten erreichen Sie uns unter der <abbr title="Phone">Tel.:</abbr> (06621) 794490 <span>
+			<p class="lead"><span style="color: #9BCA3B;"> <span class="fas fa-clock"></span> Öffnungszeiten:</span> täglich 7.30-14.30 Uhr<br>
+				<span style="font-size:small;">Außerhalb der Öffnungszeiten erreichen Sie uns unter der Tel.: (06621) 794490 <span>
 			</p>
-			<h4>Wenn Sie Fragen haben, schreiben Sie uns eine Nachricht:</h4>
-			<div class="row" style="padding-bottom: 0em;">
-				<div class="form-group col-md-6">
-					<label for="name" class="p">Name</label>
-					<input type="text" class="form-control" id="name" placeholder="Ihr Name" required>
-				</div>
-				<div class="form-group col-md-6">
-					<label for="email" class="p">Email</label>
-					<input type="email" class="form-control" id="email" placeholder="Ihr email" required>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="message" class="p ">Nachricht</label>
-				<textarea id="message" class="form-control" rows="5" placeholder="Schreiben SIe eine Nachricht" required></textarea>
-			</div>
-			<div style="padding-bottom: 25px;">
-				<button type="submit" class="btn btn-success">Submit</button>
-			</div>
+			
+			
 			<br>
 		</div>
 	
@@ -82,8 +68,9 @@
 		<?php
 			include('footer.html');
 		?>
-		
-		<script src="js/script.js"></script>
+		<script  type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/validator.min.js"></script>
+		<script type="text/javascript" src="js/form-scripts.js"></script>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
