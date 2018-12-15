@@ -1,5 +1,9 @@
 <?php
 
+require 'Exception.php';
+require 'PHPMailer.php';
+require 'SMTP.php';
+use PHPMailer\PHPMailer\PHPMailer;
 $errorMSG = "";
 
 // NAME
@@ -24,33 +28,31 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "annstepnyh@mail.ru";
-$Subject = "New Message Received";
 
-// prepare email body text
-$Body = "";
-$Body .= "Name: ";
-$Body .= $name;
-$Body .= "\n";
-$Body .= "Email: ";
-$Body .= $email;
-$Body .= "\n";
-$Body .= "Message: ";
-$Body .= $message;
-$Body .= "\n";
+$mail = new PHPMailer;
+$mail->isSMTP(); //Tell PHPMailer to use SMTP
+//Enable SMTP debugging
+// 0 = off (for production use)
+// 1 = client messages
+// 2 = client and server messages
+$mail->SMTPDebug = 0;
 
-// send email
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+$mail->Host = 'smtp.gmail.com'; //Set the hostname of the mail server
+$mail->Port = 587;
+$mail->SMTPSecure = 'tls'; //Set the encryption system to use - ssl (deprecated) or tls
 
-// redirect to success page
-if ($success && $errorMSG == ""){
-   echo "success";
-}else{
-    if($errorMSG == ""){
-        echo "Something went wrong :(";
-    } else {
-        echo $errorMSG;
-    }
+$mail->SMTPAuth = true; //Whether to use SMTP authentication
+$mail->Username = "kyrylovdev@gmail.com";
+$mail->Password = "andrey3828016";
+$mail->setFrom($email, $name);
+$mail->addAddress('annstepnyh@mail.ru', 'Hanna Stepnykh');
+$mail->Subject = 'New message'; //Set the subject line
+$mail->Body = $name . PHP_EOL . $email . PHP_EOL . $message;
+//send the message, check for errors
+if (!$mail->send()) {
+	echo "Mailer Error: " . $mail->ErrorInfo;
+} else {
+	echo "Message sent!";
 }
 
 ?>

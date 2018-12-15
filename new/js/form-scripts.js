@@ -17,6 +17,7 @@ function submitForm(){
     var email = $("#email").val();
     var message = $("#message").val();
 
+	submitMSG(true, "Try send");
     $.ajax({
         type: "POST",
         url: "php/form-process.php",
@@ -26,21 +27,18 @@ function submitForm(){
                 formSuccess();
             } else {
                 formError();
-                submitMSG(false,text);
             }
         }
     });
+	submitMSG(true, "after send");
 }
 
 function formSuccess(){
-    $("#contactForm")[0].reset();
-    submitMSG(true, "Message Submitted!")
+    submitMSG(true, "Message Submitted!");
 }
 
 function formError(){
-    $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $(this).removeClass();
-    });
+    submitMSG(true, "Message Submitted!");
 }
 
 function submitMSG(valid, msg){
