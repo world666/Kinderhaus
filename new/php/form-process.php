@@ -1,8 +1,8 @@
 <?php
 
-require 'Exception.php';
-require 'PHPMailer.php';
-require 'SMTP.php';
+require 'PHPMailer/Exception.php';
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 $errorMSG = "";
 

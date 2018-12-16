@@ -11,12 +11,9 @@
 	
     <title>Kinderhaus in Bad Hersfeld</title>
 
-    <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-    <link href="css/main.css" rel="stylesheet">	<!-- ?????Нужно свой файл создавать или подключить bootstrap css?????? -->
+    <link href="css/main.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -53,7 +50,7 @@
 			include('footer.html');
 		?>
 	
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
   </body>
 </html>
