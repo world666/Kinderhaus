@@ -56,8 +56,8 @@ ul.navbar-nav {
 	text-transform: uppercase;
 }
 
-ul.navbar-nav li a { padding: 23px 20px; background: #fff; border-top: 5px solid #fff; color: #5d5d5d; }
-ul.navbar-nav li.active a { background: #f8f8f8; border-color: #cbd92a; color: #5d5d5d; }
+ul.navbar-nav li a { padding: 23px 20px; height: 100%; background: #fff; border-top: 5px solid #fff; color: #5d5d5d; }
+ul.navbar-nav li.active a { background: #f8f8f8; height: 100%; border-color: #cbd92a; color: #5d5d5d; }
 
 ul.navbar-nav li a:hover, ul.navbar-nav li a:focus { background: #cbd92a; border-color: #cbd92a; color: #fff; outline: 0; }
 
@@ -88,16 +88,17 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #cbd92a
 .navbar>.container .navbar-brand { margin-left: 0; }
 
 .navbar-brand {
-	width: 380px;
+	width: 35%;
+	padding-left: 0.5em;
 	text-indent: -99999px;
 }
 
 
- .header-own{
+.header-own{
 	 background-color: #fafafa;
 	 border-top: 1em solid #eeeeee;
  }
- .pad_seite{
+.pad_seite{
 	margin-top: 2em;
 }
 
