@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Ihr Kinderhaus in Bad Hersfeld. Hier finden Sie die wichtige Informationen über unsere Kindergarten."> <!--  Задается описание страницы сайта в поиске -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+	<meta name="description" content="Ihr Kinderhaus in Bad Hersfeld. Hier finden Sie die wichtige Informationen über unsere Kindergarten."> 
     <meta name="author" content="">
 	<link rel="icon" href="ico/favicon.ico">
 	
     <title>Kinderhaus in Bad Hersfeld</title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+	<link rel="stylesheet" href="fontawesome/css/all.css">
     <link href="css/main.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,7 +50,7 @@
 			include('footer.html');
 		?>
 	
-		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
   </body>
 </html>

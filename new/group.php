@@ -10,7 +10,7 @@
 		<title>Kinderhaus in Bad Hersfeld</title>
 
 		<link href="css/bootstrap.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+		<link rel="stylesheet" href="fontawesome/css/all.css">
 		<link href="css/main.css" rel="stylesheet">
 	</head>
   
@@ -55,7 +55,7 @@
 			include('footer.html');
 		?>
 	
-		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		
   </body>

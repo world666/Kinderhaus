@@ -2,13 +2,14 @@
 	<a  href="index.php"><img src="img/kindergarten_1.jpg" class="img-fluid  max-width: 100%" alt="Header"></a>
 </div>
 
-	<nav class="navbar navbar-expand-md navbar-light bg-light fixed blog-nav" style="padding-top: 0; padding-bottom: 0;" >  <!-- Панель меню фиксированная и налагается на текст -->
-	<div style="padding: 0; display: block;" class="container">
-			<button  class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Menu
+	<nav class="navbar navbar-expand-md navbar-light bg-light fixed blog-nav" style="padding-top: 0; padding-bottom: 0;" > 
+	<div style="padding: 0;" class="container">
+			<a class="navbar-brand" href="#"> </a>
+			<button  class="navbar-toggler pull-right"  type="button" data-toggle="collapse"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
+				<ul class="navbar-nav">
 					<li class="nav-item <?php echo $home_active; ?>">
 						<a class="nav-link" href="index.php">Home</a>
 					</li>				
@@ -46,13 +47,6 @@
 					</li>
 					<li class="nav-item <?php echo $contacts_active; ?>">
 						<a class="nav-link" href="contact.php">Kontakt</a>
-					</li>
-				</ul>
-				<ul class="navbar-nav justify-content-end">
-					<li class="nav-item  <?php echo $message_active; ?>">
-							<a class="nav-link" href="message.php">
-								<i class="fas fa-comment-alt"></i>
-							</a>
 					</li>
 				</ul>					
 			</div><!--/.nav-collapse -->			
