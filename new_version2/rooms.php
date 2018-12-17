@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html lang="DE">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
-	<meta name="description" content="Ihr Kinderhaus in Bad Hersfeld. Hier finden Sie die wichtige Informationen über unsere Kindergarten."> 
-    <meta name="author" content="">
-	<link rel="icon" href="ico/favicon.ico">
-	
-    <title>Kinderhaus in Bad Hersfeld</title>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link href="css/bootstrap.css" rel="stylesheet">
-	<link rel="stylesheet" href="fontawesome/css/all.css">
-    <link href="css/main.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+		<meta name="description" content="Ihr Kinderhaus in Bad Hersfeld. Hier finden Sie die wichtige Informationen über unsere Kindergarten."> 
+		<meta name="author" content="">
+		<link rel="icon" href="ico/favicon.ico">
+
+		<title>Kinderhaus in Bad Hersfeld</title>
+
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="fontawesome/css/all.css">
+		<link href="css/main.css" rel="stylesheet">
+	</head>
   
 	<body>
 	
@@ -35,7 +28,7 @@
 		</div>
 		<div class="container pad_seite">
 			<div class = "row row_pad">	
-				<div class="col-md-8">
+				<div class="col-md-12">
 				<p class="lead">Seit 1994 ist das Kinderhaus in der Hainstraße 10, im Fachwerkhaus gegenüber der Hauptpost untergebracht. Von hier aus sind Parks und Spielplätze der Stadt sowie die Fuldawiesen schnell zu Fuß zu erreichen.
 				</p>
 				<p class="lead"> Uns steht eine große Altbauwohnung im Erdgeschoss des Hauses zur Verfügung. Die Räume sind hell, freundlich gestaltet und nach Funktion und Art der Aktivitäten aufgeteilt:
@@ -55,20 +48,20 @@
 				</p>
 			 </div>
 				<div class="col-md-4 ">
-					<img  src="img/unsere_raeume/raum1.png"   width="80%" style="float: right;" class="img-fluid mx-auto rounded row_pad" data-src="holder.js/500x500/auto" alt="Raum 1" ><br><br>
-					<img  src="img/unsere_raeume/raum2.png"   width="80%" style="float: right;" class="img-fluid mx-auto rounded row_pad" data-src="holder.js/500x500/auto" alt="Raum 2" ><br><br>
-					<img  src="img/unsere_raeume/raum3.png"   width="80%" style="float: right;" class="img-fluid mx-auto rounded row_pad" data-src="holder.js/500x500/auto" alt="Raum 3" >
+					<img  src="img/unsere_raeume/raum1.png"   width="100%" class="img-fluid mx-auto rounded row_pad" data-src="holder.js/500x500/auto" alt="Raum 1" ><br>
+				</div>
+				<div class="col-md-4 ">
+					<img  src="img/unsere_raeume/raum2.png"   width="100%" class="img-fluid mx-auto rounded row_pad" data-src="holder.js/500x500/auto" alt="Raum 2" ><br>
+				</div>
+				<div class="col-md-4 ">
+					<img  src="img/unsere_raeume/raum3.png"   width="100%" class="img-fluid mx-auto rounded row_pad" data-src="holder.js/500x500/auto" alt="Raum 3" ><br>
+				</div>
 				</div>
 			</div>
 		</div>
 	
-		<!-- FOOTER -->
 		<?php
 			include('footer.html');
 		?>
-	
-		<script src="js/jquery-3.2.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		
   </body>
 </html>

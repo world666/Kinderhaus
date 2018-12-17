@@ -43,7 +43,7 @@
 					</p>
 				</div>
 				<div class="col-md-4 ">
-					<img class="img-responsive pull-right img_konzept" src="img/konzept/title1.png" alt="Worauf es uns ankommt">
+					<img class="img-responsive pull-right img_konzept" width="80%" src="img/konzept/title1.png" alt="Worauf es uns ankommt">
 				</div>
 			</div>
 			<hr>
@@ -72,7 +72,7 @@
 					</p>
 				</div>
 				<div class="col-md-4 ">
-					<img class="img-responsive pull-right img_konzept" src="img/konzept/title2.png" alt="Pädagogische Ziele unserer Arbeitt">
+					<img class="img-responsive pull-right img_konzept" width="80%" style="float: center;"src="img/konzept/title2.png" alt="Pädagogische Ziele unserer Arbeitt">
 				</div>
 			</div>
 

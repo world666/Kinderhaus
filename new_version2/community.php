@@ -35,13 +35,8 @@
 			<p class="lead">Regelmäßig treffen sich Eltern und Erzieherinnen zu einem Elternabend und besprechen anstehende Vorhaben, Projekte oder auch Probleme. Wir pflegen einen freundschaftlichen und offenen Umgang miteinander. Vorschläge und konstruktive Kritik sind jederzeit willkommen. Gegenseitiges Vertrauen, Unvoreingenommenheit, Kritikfähigkeit und gemeinsames Engagement bilden das Fundament für die gute Vereinsarbeit und somit für die Qualität des Kinderhauses. Die Freude, mit der unsere Kinder die Einrichtung besuchen, zeigt uns, dass es funktioniert.</p>
 		</div>
 	
-		<!-- FOOTER -->
 		<?php
 			include('footer.html');
-		?>
-			
-		<script src="js/jquery-3.2.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		
+		?>	
   </body>
 </html>

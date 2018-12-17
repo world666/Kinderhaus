@@ -14,12 +14,6 @@
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link rel="stylesheet" href="fontawesome/css/all.css">
 		<link href="css/main.css" rel="stylesheet">
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
 		<link rel="stylesheet" href="css/animate.css">
 	</head>
   
@@ -52,7 +46,7 @@
 				</div>
 				<br>
 			</div>
-			<p class="lead"><span style="color: #9BCA3B;"> <span class="fas fa-clock"></span> Öffnungszeiten:</span> täglich 7.30-14.30 Uhr<br>
+			<p class="lead"><span style="color: #cbd92a;"> <span class="fas fa-clock"></span> Öffnungszeiten:</span> täglich 7.30-14.30 Uhr<br>
 				<span style="font-size:small;">Außerhalb der Öffnungszeiten erreichen Sie uns unter der Tel.: (06621) 794490 <span>
 			</p>	
 		</div>
@@ -90,12 +84,8 @@
 			include('footer.html');
 		?>
 
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="js/validator.min.js"></script>
 		<script src="js/form-scripts.js"></script>
-	
-		
-		<script src="js/bootstrap.min.js"></script>
 		
   </body>
 </html>

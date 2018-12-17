@@ -14,11 +14,6 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="fontawesome/css/all.css">
     <link href="css/main.css" rel="stylesheet">
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
   
   
@@ -37,13 +32,8 @@
 			<p class="lead">In diesem Bereich unserer Internetseite sehen wir für jeden unserer Förderer einen Eintrag vor, mit dem wir uns öffentlich für die Unterstützung bedanken möchten. Ganz nach dem Motto: Sie tun Gutes und wir reden darüber!</p>
 		</div>
 	
-		<!-- FOOTER -->
 		<?php
 			include('footer.html');
 		?>
-	
-		<script src="js/jquery-3.2.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		
   </body>
 </html>

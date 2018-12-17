@@ -1,11 +1,15 @@
 html {
 	width: 100%;
+	padding: 0px;
+    margin: 0px;
 }
 
 body {
 	background: #fff;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
+	padding: 0px;
+    margin: 0px;
 }
 button.navbar-toggler{
 	outline-color: transparent;
@@ -13,7 +17,13 @@ button.navbar-toggler{
 	float: left;
 	padding-left:0;
 	margin-left: 0;
+}
 
+.header_adresse{
+	color: #fff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: right;
 }
 
 .header_adresse{
@@ -119,6 +129,7 @@ h4{
 }
 em{
 	color: #cbd92a;
+	font-weight: 400;
 }
 dt{
 	font-weight: 500;
@@ -128,12 +139,10 @@ dt{
 	width: 100%;
 	margin: 0 0 1em 2em;
     padding: 0;
-
 }
  .footer-own{
 	 background-color: #aaa;
 	 color: #fff;
-
  }
 .row_pad{
 	padding-bottom: 2em;
@@ -141,9 +150,11 @@ dt{
 .lead{
 	text-align: justify;
 }
+
 .footer_herf,
 .footer_herf:hover {
 	color: #fff;
+	text-decoration:underline;
 }
 
 
