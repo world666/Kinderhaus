@@ -58,7 +58,7 @@
 				<div class="row" style="padding-bottom: 0em;">
 					<div class="form-group col-md-6">
 						<label for="name" class="p">Name</label>
-						<input type="text" class="form-control" id="name" placeholder="Ihr Name" required data-error="NEW ERROR MESSAGE">
+						<input type="text" class="form-control" id="name" placeholder="Ihr Name" required>
 					</div>
 					<div class="form-group col-md-6">
 						<label for="email" class="p">Email</label>
@@ -72,11 +72,9 @@
 				</div>
 				<div style="padding-bottom: 0.2em;">
 					<button type="submit" class="btn btn-success" id="form-submit">Senden</button>
-	
 				</div>
 				<br>
 				<div id="msgSubmit" class="hidden"></div>
-				<div class="clearfix"></div>
 			</form>
 			<br>
 		</div>
