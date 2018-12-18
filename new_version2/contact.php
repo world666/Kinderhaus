@@ -70,10 +70,12 @@
 					<textarea id="message" class="form-control" rows="5" placeholder="Schreiben SIe eine Nachricht" required></textarea>
 					<div class="help-block with-errors"></div>
 				</div>
-				<div style="padding-bottom: 25px;">
-					<button type="submit" class="btn btn-success" id="form-submit">Submit</button>
+				<div style="padding-bottom: 0.2em;">
+					<button type="submit" class="btn btn-success" id="form-submit">Senden</button>
+	
 				</div>
-				<div id="msgSubmit" class="h3 text-center hidden"></div>
+				<br>
+				<div id="msgSubmit" class="hidden"></div>
 				<div class="clearfix"></div>
 			</form>
 			<br>

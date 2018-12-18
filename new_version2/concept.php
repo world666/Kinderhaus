@@ -26,14 +26,16 @@
 			<h2>Unser Konzept</h2>
 		</div>
 		<div class="container pad_seite">		
-		
+			<h4>Worauf es uns ankommt</h4>	
+				<blockquote class="blockquote">
+					<p class="mb-0">Eine Welt ohne Kinder wäre wie ein Himmel ohne Sterne. </p>
+					<footer class="blockquote-footer">Phil Bosman</footer>
+				</blockquote>
 			<div class = "row">	
-				<div class="col-md-8">
-					<h4>Worauf es uns ankommt</h4>	
-					<blockquote class="blockquote">
-						<p class="mb-0">Eine Welt ohne Kinder wäre wie ein Himmel ohne Sterne. </p>
-						<footer class="blockquote-footer">Phil Bosman</footer>
-					</blockquote>
+				<div class="col-md-2">
+					<img class="img-responsive pull-right img_konzept" width="100%" src="img/konzept/title1.png" alt="Worauf es uns ankommt">
+				</div>
+				<div class="col-md-10">
 					<p class="lead">
 						Unser Kinderhaus ist ein Ort des Miteinanders. Wir möchten, dass sich die Kinder bei uns wohlfühlen und in warmer, familiärer Atmosphäre eine unbeschwerte Zeit verbringen.
 						<br>
@@ -42,19 +44,20 @@
 						Kinder kommen mit sehr unterschiedlichen Voraussetzungen zu uns. Wir möchten die Kinder dort abholen, wo sie stehen, in ihrer körperlichen, emotionalen und geistigen Entwicklung begleiten und sie entsprechend ihrer individuellen Möglichkeiten unterstützen und fördern.
 					</p>
 				</div>
-				<div class="col-md-4 ">
-					<img class="img-responsive pull-right img_konzept" width="80%" src="img/konzept/title1.png" alt="Worauf es uns ankommt">
-				</div>
+				
 			</div>
 			<hr>
-			<div class = "row row_pad">	
-				<div class="col-md-8">
-					<h4>Pädagogische Ziele unserer Arbeitt</h4>
+			<h4>Pädagogische Ziele unserer Arbeitt</h4>
 					<blockquote class="blockquote">
 						<p class="mb-0">Man kann den Menschen nichts beibringen.<br>
 										Man kann ihnen nur helfen, es in sich selbst zu entdecken. </p>
 						<footer class="blockquote-footer">Galileo Galilei</footer>
 					</blockquote>
+			<div class = "row row_pad">	
+				<div class="col-md-2">
+					<img class="img-responsive pull-right img_konzept" width="1-00%" style="float: center;"src="img/konzept/title2.png" alt="Pädagogische Ziele unserer Arbeitt">
+				</div>
+				<div class="col-md-10">
 					<p class="lead">
 					Jedes Kind kommt mit unterschiedlichen Fähigkeiten und Fertigkeiten zu uns ins Kinderhaus. Wir wollen diese in unterschiedlichen Lernbereichen weiterentwickeln und die Selbst-, Sach- und Sozialkompetenzen der Kinder stärken.
 						<ul class="liste">
@@ -70,9 +73,6 @@
 							<li>Sensibilisierung der Sinne</li>
 						</ul>
 					</p>
-				</div>
-				<div class="col-md-4 ">
-					<img class="img-responsive pull-right img_konzept" width="80%" style="float: center;"src="img/konzept/title2.png" alt="Pädagogische Ziele unserer Arbeitt">
 				</div>
 			</div>
 

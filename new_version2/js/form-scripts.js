@@ -43,9 +43,9 @@ function formError(){
 
 function submitMSG(valid, msg){
     if(valid){
-        var msgClasses = "h3 text-center tada animated text-success";
+        var msgClasses = "h_message tada text-success";
     } else {
-        var msgClasses = "h3 text-center text-danger";
+        var msgClasses = "h_message text-danger_own";
     }
     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 }

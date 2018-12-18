@@ -158,6 +158,21 @@ dt{
 	text-decoration:underline;
 }
 
+.btn-success.disabled, .btn-success:disabled{
+	background-color: #cbd92a;
+	border-color: #cbd92a;
+}
+
+.text-danger_own{
+	color: #cbd92a;
+	font-weight: 400;
+	
+}
+.h_message{
+	font-size: 1 rem !important;
+	padding-top: 0.2 em !important;
+	padding-bottom: 0.2 em !important;
+}
 
 
 
