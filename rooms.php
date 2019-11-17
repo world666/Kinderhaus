@@ -47,6 +47,7 @@
 				<p class="lead">Draußen im Hof steht uns ein Stück Garten zur Verfügung, das wir Eltern zum Spielplatz umgebaut haben: mit einem großen Sandkasten und vielen anderen Spielgeräten.
 				</p>
 			 </div>
+			 <!--
 				<div class="col-md-4 ">
 					<img  src="img/rooms/room1.png"   width="100%" class="img-fluid mx-auto rounded row_pad" data-src="holder.js/500x500/auto" alt="Raum 1" ><br>
 				</div>
@@ -56,8 +57,10 @@
 				<div class="col-md-4 ">
 					<img  src="img/rooms/room3.png"   width="100%" class="img-fluid mx-auto rounded row_pad" data-src="holder.js/500x500/auto" alt="Raum 3" ><br>
 				</div>
-				</div>
-			</div>
+				
+			<-->
+		
+		</div>	
 		</div>
 	
 		<?php

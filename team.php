@@ -29,48 +29,27 @@
 		</div>
 		<div class="container pad_seite">
 			
-			<h4>Nancy Weidemann</h4>
-			<p class="p_own">Mein Name ist Nancy Weidemann und ich arbeite seit 2007 in unserem Kinderhaus. Dort habe ich mein Anerkennungsjahr absolviert und bin seitdem als staatlich anerkannte Erzieherin tätig.
-			</p>
+			
 			<div class = "row">	
-				<div class="col-md-2 ">
-					<img  src="img/team/nancy.png"  width="100%" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Nancy Weidemann" >
+				<div class="col-md-4">
+					<img  src="img/team/team.jpg"  width="100%" class="img-fluid mx-auto rounded" alt="Unsere Team">
+						<p class="text-center" style="font-weight: bolder;">
+							<br>
+							Drei Erzieher und eine Praktikantin
+						</p>
 				</div>
-				<div class="col-md-10">
+				<div class="col-md-8">
+					<h4>Nancy Weidemann</h4>
+					<p class="p_own">Mein Name ist Nancy Weidemann und ich arbeite seit 2007 in unserem Kinderhaus. Dort habe ich mein Anerkennungsjahr absolviert und bin seitdem als staatlich anerkannte Erzieherin tätig.
+					</p>
 					<p class="p_own">In meiner Arbeit lege ich Wert darauf, dass wir mit den Kindern einen harmonischen Vormittag erleben. Wir versuchen den Kindern zu vermitteln, wie wichtig es ist, sich gegenseitig zu akzeptieren und zu respektieren. Dies ist besonders im Zusammenleben zwischen unseren Kleinsten und den Vorschulkindern von großer Bedeutung. Einen hohen Stellenwert hat für mich auch die individuelle Förderung jedes einzelnen Kindes.
 					</p>
 					<p class="p_own">Die Schwerpunkte meiner Arbeit liegen in der Naturpädagogik, dem Kreativen und der Kleinkindpädagogik. Hier ist es mir sehr wichtig, die Kleinsten liebevoll in unsere Gruppe zu integrieren und ihnen als feste Bezugsperson den Start in das Kindergartenleben zu erleichtern. </p>
 					</p>
-				</div>
-			</div>
-			<hr>
-			<h4>Nancy Weidemann</h4>
-			<p class="p_own">Mein Name ist Nancy Weidemann und ich arbeite seit 2007 in unserem Kinderhaus. Dort habe ich mein Anerkennungsjahr absolviert und bin seitdem als staatlich anerkannte Erzieherin tätig.
-			</p>
-			<div class = "row">	
-				<div class="col-md-2 ">
-					<img  src="img/team/nancy.png"  width="100%" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Nancy Weidemann" >
-				</div>
-				<div class="col-md-10">
-					<p class="p_own">In meiner Arbeit lege ich Wert darauf, dass wir mit den Kindern einen harmonischen Vormittag erleben. Wir versuchen den Kindern zu vermitteln, wie wichtig es ist, sich gegenseitig zu akzeptieren und zu respektieren. Dies ist besonders im Zusammenleben zwischen unseren Kleinsten und den Vorschulkindern von großer Bedeutung. Einen hohen Stellenwert hat für mich auch die individuelle Förderung jedes einzelnen Kindes.
-					</p>
-					<p class="p_own">Die Schwerpunkte meiner Arbeit liegen in der Naturpädagogik, dem Kreativen und der Kleinkindpädagogik. Hier ist es mir sehr wichtig, die Kleinsten liebevoll in unsere Gruppe zu integrieren und ihnen als feste Bezugsperson den Start in das Kindergartenleben zu erleichtern. </p>
-					</p>
-				</div>
-			</div>
-			<hr>
-			<h4>Nancy Weidemann</h4>
-			<p class="p_own">Mein Name ist Nancy Weidemann und ich arbeite seit 2007 in unserem Kinderhaus. Dort habe ich mein Anerkennungsjahr absolviert und bin seitdem als staatlich anerkannte Erzieherin tätig.
-			</p>
-			<div class = "row">	
-				<div class="col-md-2 ">
-					<img  src="img/team/nancy.png"  width="100%" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Nancy Weidemann" >
-				</div>
-				<div class="col-md-10">
-					<p class="p_own">In meiner Arbeit lege ich Wert darauf, dass wir mit den Kindern einen harmonischen Vormittag erleben. Wir versuchen den Kindern zu vermitteln, wie wichtig es ist, sich gegenseitig zu akzeptieren und zu respektieren. Dies ist besonders im Zusammenleben zwischen unseren Kleinsten und den Vorschulkindern von großer Bedeutung. Einen hohen Stellenwert hat für mich auch die individuelle Förderung jedes einzelnen Kindes.
-					</p>
-					<p class="p_own">Die Schwerpunkte meiner Arbeit liegen in der Naturpädagogik, dem Kreativen und der Kleinkindpädagogik. Hier ist es mir sehr wichtig, die Kleinsten liebevoll in unsere Gruppe zu integrieren und ihnen als feste Bezugsperson den Start in das Kindergartenleben zu erleichtern. </p>
-					</p>
+					<hr>
+					<h4>Manuela Döring</h4>
+					<hr>
+					<h4>Kevin Seitz</h4>
 				</div>
 			</div>
 			<br>

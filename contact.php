@@ -46,7 +46,7 @@
 				</div>
 				<br>
 			</div>
-			<p class="lead"><span style="color: #cbd92a;"> <span class="fas fa-clock"></span> Öffnungszeiten:</span> täglich 7.30-14.30 Uhr<br>
+			<p class="lead"><span style="color: #cbd92a;"> <span class="fas fa-clock"></span> Öffnungszeiten:</span> täglich 7.15-14.30 Uhr<br>
 				<!--<span style="font-size:small;">Außerhalb der Öffnungszeiten erreichen Sie uns unter der Tel.: (06621) 794490 <span>-->
 			</p>	
 		</div>
