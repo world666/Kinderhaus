@@ -39,10 +39,10 @@
 				</dd>
 				<br>
 				<dt style="text-align: left;">Vorstand</dt>
-				<dd>Melina Quentel-Hergert, Anna-Maria Gellrich</dd>
+				<dd>Ina Knierim, Doreen Meyer</dd>
 				<br>
 				<dt style="text-align: left;">Kassenwart</dt>
-				<dd>Sabine Hoffmann</dd>
+				<dd>Franziska Richter</dd>
 				<br>
 				<dt style="text-align: left;">Seitenverantwortlich</dt>
 				<dd>
