@@ -12,36 +12,17 @@
 		<title>Kinderhaus in Bad Hersfeld</title>
 
 		<link href="css/bootstrap.css" rel="stylesheet">
-		<link rel="stylesheet" href="fontawesome/css/all.css">
+		<link href="fontawesome/css/all.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
+		<script src="js/navigation.js"></script>
 	</head>
   
   
 	<body>
-	
 		<?php
+			$content = "content/index.html";
 			$home_active = "active";
-			include('header.php');
+			include('layout.php');
 		?>
-		
-		<div class="container pad_seite">
-			<h2>Herzlich wilkommen!</h2>
-		</div>
-		<div class="container pad_seite">
-			<div class = "row row_pad">
-		
-				<div class="col-md-8">
-					<p class="lead">Wir, „Das Kinderhaus“, sind ein kleiner, sympathischer Kindergarten mitten in Hersfeld, gegründet und getragen von einer Elterninitiative.</p>
-					<p class="lead"> Unsere 18 Kinder im Alter von 2-6 Jahren werden von drei engagierten Erzieherinnen betreut. Unser Kinderhaus ist ein Ort des Miteinanders, in dem die Kinder in warmer, familiärer Atmosphäre unbeschwerte Zeit erleben. Wir legen Wert auf individuelle, altersgerechte Förderung, auf eine Erziehung, die geprägt ist von Verständnis und Toleranz.</p>
-				</div>
-				<div class="col-md-4 ">
-					<img  src="img/main.png"  width="100%" class="img-fluid mx-auto rounded" alt="Das Kinderhaus Bad Hersfeld" >
-				</div>	
-			</div>
-		</div>
-	
-		<?php
-			include('footer.html');
-		?>
-  </body>
+    </body>
 </html>

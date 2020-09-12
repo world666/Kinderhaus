@@ -6,7 +6,7 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff; padding: 0;"  >  <!-- Панель меню фиксированная и налагается на текст -->
 	<div style="padding: 0;" class="container">
 		<img class="navbar-brand" src="img/logo.png" alt="Das Kinderhaus">
-		<button  class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
