@@ -1,6 +1,6 @@
 async function linkHandler(href)
 {
-	let url = 'https://kinderhaus-hersfeld.de/' + href;
+	let url = href;
 	let response = await fetch(url);
 	if (response.ok)
 	{ // если HTTP-статус в диапазоне 200-299
