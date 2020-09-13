@@ -1,3 +1,7 @@
+<?php
+	set_include_path("../php" . PATH_SEPARATOR . "php");
+	include 'visitorsControl.php';
+?>
 <div class="container pad_seite">
 	<h2>Unsere Räume</h2>
 </div>

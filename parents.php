@@ -1,5 +1,5 @@
 <?php
-	$content = "content/parents.html";
+	$content = "content/parentsContent.php";
 	$alternative_active = "active";
 	include('layout.php');
 ?>

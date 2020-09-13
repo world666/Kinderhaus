@@ -1,5 +1,5 @@
 <?php
-	$content = "content/rooms.html";
+	$content = "content/roomsContent.php";
 	$about_active = "active";
 	include('layout.php');
 ?>

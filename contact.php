@@ -1,5 +1,5 @@
 <?php
-	$content = "content/contact.html";
+	$content = "content/contactContent.php";
 	$contact_active = "active";
 	include('layout.php');
 ?>

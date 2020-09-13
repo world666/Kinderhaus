@@ -1,5 +1,5 @@
 <?php
-	$content = "content/community.html";
+	$content = "content/communityContent.html";
 	$alternative_active = "active";
 	include('layout.php');
 ?>

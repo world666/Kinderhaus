@@ -1,5 +1,5 @@
 <?php
-	$content = "content/concept.html";
+	$content = "content/conceptContent.php";
 	$work_active = "active";
 	include('layout.php');
 ?>

@@ -1,5 +1,5 @@
 <?php
-	$content = "content/group.html";
+	$content = "content/groupContent.php";
 	$about_active = "active";
 	include('layout.php');
 ?>

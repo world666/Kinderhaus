@@ -1,5 +1,5 @@
 <?php
-	$content = "content/schedule.html";
+	$content = "content/scheduleContent.php";
 	$work_active = "active";
 	include('layout.php');
 ?>

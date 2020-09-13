@@ -1,5 +1,5 @@
 <?php
-	$content = "content/week.html";
+	$content = "content/weekContent.php";
 	$work_active = "active";
 	include('layout.php');
 ?>

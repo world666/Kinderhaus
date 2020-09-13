@@ -1,5 +1,5 @@
 <?php
-	$content = "content/holidays.html";
+	$content = "content/holidaysContent.php";
 	$work_active = "active";
 	include('layout.php');
 ?>

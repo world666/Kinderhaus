@@ -1,5 +1,5 @@
 <?php
-	$content = "content/payment.html";
+	$content = "content/paymentContent.php";
 	$payment_active = "active";
 	include('layout.php');
 ?>

@@ -1,5 +1,5 @@
 <?php
-	$content = "content/promotion.html";
+	$content = "content/promotionContent.php";
 	$promotion_active = "active";
 	include('layout.php');
 ?>

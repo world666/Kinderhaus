@@ -1,4 +1,4 @@
 <?php
-	$content = "content/impressum.html";
+	$content = "content/impressumContent.php";
 	include('layout.php');
 ?>

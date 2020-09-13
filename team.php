@@ -1,5 +1,5 @@
 <?php
-	$content = "content/team.html";
+	$content = "content/teamContent.php";
 	$about_active = "active";
 	include('layout.php');
 ?>
