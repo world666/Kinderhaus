@@ -1,15 +1,30 @@
-async function linkHandler(href)
+async function linkHandler(href, activeId)
 {
 	let url = href;
-	let response = await fetch(url);
-	if (response.ok)
-	{ // если HTTP-статус в диапазоне 200-299
-	  // получаем тело ответа (см. про этот метод ниже)
-	  let htmlText = await response.text();
-	  document.getElementById("content").innerHTML = htmlText;
-	} 
-	else
+	try
 	{
-	  alert("ERROR HTTP: " + response.status);
+		let response = await fetch(url);
+		if (response.ok)
+		{ 
+		  let htmlText = await response.text();
+		  $("#content").html(htmlText);
+		  if(activeId != undefined)
+		  {
+			$(".navbar-nav li").removeClass("active");
+			$(activeId).addClass("active");
+			if($("#navButton").is(":visible"))
+			{
+				$("#navButton").click();
+			}
+		  }
+		} 
+		else
+		{
+		  alert("ERROR HTTP: " + response.status);
+		}
+	}
+	catch(error)
+	{
+		alert(error);
 	}
 }

@@ -59,7 +59,7 @@ ul.navbar-nav {
 ul.navbar-nav li a { padding: 23px 20px; height: 100%; background: #fff; border-top: 5px solid #fff; color: #5d5d5d; }
 ul.navbar-nav li.active a { background: #f8f8f8; height: 100%; border-color: #cbd92a; color: #5d5d5d; }
 
-ul.navbar-nav li a:hover, ul.navbar-nav li a:focus { background: #cbd92a; border-color: #cbd92a; color: #fff; outline: 0; }
+ul.navbar-nav li a:hover { background: #cbd92a; border-color: #cbd92a; color: #fff; outline: 0; }
 
 .nav .open > a { background: #f8f8f8; border-color: #cbd92a; color: #5d5d5d; }
 .nav .open > a:hover, .nav .open > a:focus { background: #cbd92a; border-color: #cbd92a; color: #fff; }
