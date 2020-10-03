@@ -15,9 +15,9 @@
 		<p class="lead">Jedoch hat jede Altersgruppe ihre besonderen Bedürfnisse und den besonderen Förderbedarf. Es ist deshalb sinnvoll und wichtig, dass im Rahmen des täglichen Gruppengeschehens Kinder unterschiedlicher Altersstufen zeitweise getrennt betreut werden. So können sich z.B. die Kleinen zum Vorlesen oder zum Ausruhen ins Kuschelzimmer zurückziehen, während mit den Vorschulkindern im Spielzimmer Verkehrsregeln geübt werden. </p>
 		<p class="lead">Zur Zeit haben wir folgende Gruppenstruktur:
 		<ul class="liste">
-			<li>Die Kleinen (2-3 jährige): Abudi, Haakon, Jill, Mika, Mischa</li>
-			<li>Die Mittleren (3-4 jährige): Ben, Baby, Muadh, Tom, Phil, Vincent, Max</li>
-			<li>Die Großen (Vorschulkinder): Elisa, Zoey, Genevra</li>
+			<li>Die Kleinen (2-3 jährige): Sara</li>
+			<li>Die Mittleren (3-4 jährige): Abudi, Haakon, Jill, Mika, Mischa, Sophie, Stella</li>
+			<li>Die Großen (Vorschulkinder): Ben, Baby, Muadh, Tom, Phil, Vincent, Max</li>
 		</ul>
 		</p>
 		<p class="lead">Wir achten darauf, ein ausgewogenes Verhältnis zwischen den Altersgruppen sowie zwischen Jungen und Mädchen zu erhalten. </p>
