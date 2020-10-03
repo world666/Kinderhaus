@@ -11,6 +11,7 @@
 
 		<title>Kinderhaus in Bad Hersfeld</title>
 
+		<link rel="manifest" href="manifest.webmanifest">
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="fontawesome/css/all.css">
 		<link rel="stylesheet"  href="css/main.css">
