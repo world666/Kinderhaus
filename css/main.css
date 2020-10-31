@@ -118,7 +118,8 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #c9d72b
 }
 
 .p_own{
-	font-size: large;
+	font-size: 1.25rem;
+    font-weight: 300;
 }
 ul{
 	padding-top: 0 px;
