@@ -5,7 +5,7 @@
 <div class="container pad_seite">
 	<h2>Unser Tagesablaug</h2>
 </div>
-<div class="container pad_seite" style="padding-bottom: 2em;">
+<div class="container pad_seite1" style="padding-bottom: 2em;">
 	<p class="lead"> 
 		<span style="color: #cbd92a;" class="fas fa-clock"></span> 
 		Unser Kindergarten öffnet um 7.15 Uhr. 

@@ -5,7 +5,7 @@
 <div class="container pad_seite">
 	<h2>Herzlich wilkommen!</h2>
 </div>
-<div class="container pad_seite">
+<div class="container pad_seite1">
 	<div class = "row row_pad">
 		<div class="col-md-8">
 			<p class="lead">Wir, „Das Kinderhaus“, sind ein kleiner, sympathischer Kindergarten mitten in Hersfeld, gegründet und getragen von einer Elterninitiative.</p>

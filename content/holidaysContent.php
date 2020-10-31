@@ -5,7 +5,7 @@
 <div class="container pad_seite">
 	<h2>Feste und Feiern</h2>
 </div>
-<div class="container pad_seite" style="padding-bottom: 2em;">
+<div class="container pad_seite1" style="padding-bottom: 2em;">
 	<p class="lead" style="font-style: oblique;">Im Kinderhaus feiern wir regelmäßig folgende Feste:
 		<dl class="lead" >
 			<dt style="text-align: left;">Kindergeburtstage</dt>

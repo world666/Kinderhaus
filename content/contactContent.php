@@ -5,7 +5,7 @@
 <div class="container pad_seite">
 	<h2>Kontakt</h2>
 </div>
-<div class="container pad_seite">
+<div class="container pad_seite1">
 	<p class="lead">Wir vergeben regelmäßig, auch mitten im Kindergartenjahr, Plätze und freuen uns auf Nachwuchs. Rufen Sie uns an oder kommen Sie einfach vorbei.</p>
 	<div class="row row_pad">
 		<div class="col-md-4 bottom_text">
@@ -24,7 +24,7 @@
 		</div>
 		<br>
 	</div>
-	<p class="lead"><span style="color: #cbd92a;"> <span class="fas fa-clock"></span> Öffnungszeiten:</span> täglich 7.15-14.30 Uhr<br>
+	<p class="lead"><span style="color: #cbd92a;"> <span class="fas fa-clock"></span></span><b> Öffnungszeiten </b>: täglich 7.15-14.30 Uhr<br>
 		<!--<span style="font-size:small;">Außerhalb der Öffnungszeiten erreichen Sie uns unter der Tel.: (06621) 794490 <span>-->
 	</p>	
 </div>

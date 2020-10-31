@@ -5,7 +5,7 @@
 <div class="container pad_seite">
 	<h2>Aktivitäten während der Woche</h2>
 </div>
-<div class="container pad_seite">
+<div class="container pad_seite1">
 	<p class="lead"> Fester Bestandteil unserer Angebote sind regelmäßige Aktivitäten, die wir mit den Kindern unternehmen. Sie strukturieren die Woche und geben unseren Kindern Halt und Orientierung.
 	</p>
 	<div class = "row">	

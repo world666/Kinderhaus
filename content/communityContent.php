@@ -5,7 +5,7 @@
 <div class="container pad_seite">
 	<h2>Der Verein</h2>
 </div>
-<div class="container pad_seite" style="padding-bottom: 2em;">
+<div class="container pad_seite1" style="padding-bottom: 2em;">
 	<p class="lead">Das Kinderhaus ist eine öffentlich anerkannte, gemeinnützige Einrichtung zur Kinderbetreuung, gegründet und getragen von einer selbstverwalteten Elterninitiative – dem <em>Verein „Eltern-Kind-Gruppe e.V.“</em>
 		<br>Das Hauptorgan des Vereins ist die Elternversammlung. Die Versammlung wählt den Vorstand, welcher zur Zeit aus zwei Mitgliedern besteht. Weiterhin werden ein Kassenwart und zwei Kassenprüfer gewählt. 
 		<br>Die Grundlage der Vereinsarbeit ist die Satzung, die auch alle wichtigen Informationen zur Mitgliedschaft enthält.

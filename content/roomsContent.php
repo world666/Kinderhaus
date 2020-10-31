@@ -5,7 +5,7 @@
 <div class="container pad_seite">
 	<h2>Unsere Räume</h2>
 </div>
-<div class="container pad_seite">
+<div class="container pad_seite1">
 	<div class = "row row_pad">	
 		<div class="col-md-12">
 			<p class="lead">Seit 1994 ist das Kinderhaus in der Hainstraße 10, im Fachwerkhaus gegenüber der Hauptpost untergebracht. Von hier aus sind Parks und Spielplätze der Stadt sowie die Fuldawiesen schnell zu Fuß zu erreichen.

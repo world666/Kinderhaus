@@ -5,7 +5,7 @@
 <div class="container pad_seite">
 	<h2>Elternmitarbeit</h2>
 </div>
-<div class="container pad_seite" style="padding-bottom: 2em;">
+<div class="container pad_seite1" style="padding-bottom: 2em;">
 	<p class="lead">Als selbstverwalteter Verein sind wir auf Initiative und tatkräftige Unterstützung unserer Mitglieder – der Eltern – angewiesen. Die Elternmitarbeit kann bei uns zum Beispiel bedeuten: 
 		<ul class="liste">
 			<li>Übernahme von Ämtern</li>

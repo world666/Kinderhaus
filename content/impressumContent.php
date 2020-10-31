@@ -5,7 +5,7 @@
 <div class="container pad_seite">
 	<h2>Impressum</h2>
 </div>
-<div class="container pad_seite" style="padding-bottom: 2em;">
+<div class="container pad_seite1" style="padding-bottom: 2em;">
 	<dl class="lead" >
 		<dt style="text-align: left;">Anbieter</dt>
 		<dd>Das Kinderhaus<br>Öffentlich anerkannte, gemeinnützige Einrichtung zur Kinderbetreuung<br>
@@ -16,13 +16,13 @@
 				<abbr title="Phone">Tel.:</abbr> (06621) 74443
 			</address>
 		</dd>
-		<br>
+		
 		<dt style="text-align: left;">Vorstand</dt>
 		<dd>Ina Knierim, Doreen Meyer</dd>
-		<br>
+		
 		<dt style="text-align: left;">Kassenwart</dt>
-		<dd>Franziska Richter</dd>
-		<br>
+		<dd>Ute Ferrara</dd>
+		
 		<dt style="text-align: left;">Seitenverantwortlich</dt>
 		<dd>
 			Hanna Stepnykh<br>

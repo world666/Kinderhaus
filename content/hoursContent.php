@@ -5,7 +5,7 @@
 <div class="container pad_seite">
 	<h2>Unsere Öffnungszeiten</h2>
 </div>
-<div class="container pad_seite">
+<div class="container pad_seite1">
 		<dl class="row zeit">
 			<dt class="col-md-2" style="text-align: left;">Montag</dt>
 			<dd class="col-md-10">7.15 bis 14.30 Uhr</dd>

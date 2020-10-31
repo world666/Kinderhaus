@@ -77,7 +77,7 @@
 			</div>
 		</nav>
 
-		<div style="padding: 0" class="container">
+		<div style="padding: 0">
 			<a  href="javascript:linkHandler('content/indexContent.php', '#home_active')"><img src="img/header.jpg" class="img-fluid" width="100%" alt="Header"></a>
 		</div>
 

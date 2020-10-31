@@ -5,7 +5,7 @@
 <div class="container pad_seite">
 	<h2>Unsere Gruppe</h2>
 </div>
-<div class="container pad_seite">
+<div class="container pad_seite1">
 	<div class = "row row_pad">	
 		<div class="col-md-8">
 	

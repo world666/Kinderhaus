@@ -5,7 +5,7 @@
 <div class="container pad_seite">
 	<h2>Unser Konzept</h2>
 </div>
-<div class="container pad_seite">		
+<div class="container pad_seite1">		
 	<h4>Worauf es uns ankommt</h4>	
 		<blockquote class="blockquote">
 			<p class="mb-0">Eine Welt ohne Kinder wäre wie ein Himmel ohne Sterne. </p>
