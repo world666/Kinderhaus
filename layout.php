@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="fontawesome/css/all.css">
 		<link rel="stylesheet"  href="css/main.css">
-		<script src="js/navigation.js"></script>
+		<script src="js/navigation-0.0.1.js"></script>
 	</head>
 	<body>
 		<div class="row" style="background-color: #aaa; margin:0">
@@ -90,7 +90,7 @@
 		<footer class="footer-own" style="padding: 1em 0 1em 0;">
 				<div class="container">
 					<p class="float-right" style="margin-bottom: 0;"><a class="footer_herf" href="#">Zurück nach oben</a></p>
-					<p style="margin-bottom: 0;"><span class="far fa-copyright"></span>  2017-2020 Das Kinderhaus, Hainstraße 10, 36251 Bad Hersfeld &middot;
+					<p style="margin-bottom: 0;"><span class="far fa-copyright"></span>  2017-2021 Das Kinderhaus, Hainstraße 10, 36251 Bad Hersfeld &middot;
 						<a class="footer_herf" href="javascript:linkHandler('content/impressumContent.php')">Impressum</a> &middot;
 						<a class="footer_herf" href="javascript:linkHandler('content/disclaimerContent.php')">Haftungsausschluss</a>
 					</p>
@@ -98,7 +98,7 @@
 		</footer>
 
 		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/windowresizer.js"></script>
+		<script src="js/bootstrap-3.3.1.min.js"></script>
+		<script src="js/windowresizer-0.0.1.js"></script>
    </body>
 </html>
