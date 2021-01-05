@@ -1,9 +1,11 @@
 
 var CACHE_NAME = 'service-worker-v1';
 
-self.addEventListener('install', (event) => {
+self.addEventListener('install', (event) =>
+{
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
+    caches.open(CACHE_NAME).then((cache) =>
+	{
       return cache.addAll([
         './img/header.jpg',
         './img/logo.png',
@@ -13,7 +15,8 @@ self.addEventListener('install', (event) => {
   );
 });
 
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', function(event)
+{
 
   var cacheAllowlist = [CACHE_NAME];
 
@@ -33,7 +36,8 @@ self.addEventListener('activate', function(event) {
   );
 });
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function(event)
+{
   event.respondWith(
 	fetch(event.request).then(
 		function (response)
@@ -53,9 +57,36 @@ self.addEventListener('fetch', function(event) {
 				if (response !== undefined)
 				   return response;
 				else
-				   return new Response('Hello from your friendly neighbourhood service worker!');
+				   return new Response('You are offline!');
 			  });
 
 		})
 	);
+});
+
+
+// notification handlers
+self.addEventListener('notificationclose', function(e)
+{
+  var notification = e.notification;
+  var primaryKey = notification.data.primaryKey;
+
+  console.log('Closed notification: ' + primaryKey);
+});
+
+self.addEventListener('notificationclick', function(e)
+{
+  var notification = e.notification;
+  var primaryKey = notification.data.primaryKey;
+  var action = e.action;
+
+  if (action === 'close')
+  {
+    notification.close();
+  }
+  else
+  {
+    clients.openWindow('http://www.google.com');
+    notification.close();
+  }
 });
