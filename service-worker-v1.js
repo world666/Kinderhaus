@@ -1,4 +1,6 @@
 
+
+// fatch handlers
 var CACHE_NAME = 'service-worker-v1';
 
 self.addEventListener('install', (event) =>
@@ -17,7 +19,6 @@ self.addEventListener('install', (event) =>
 
 self.addEventListener('activate', function(event)
 {
-
   var cacheAllowlist = [CACHE_NAME];
 
   event.waitUntil(
@@ -38,55 +39,100 @@ self.addEventListener('activate', function(event)
 
 self.addEventListener('fetch', function(event)
 {
-  event.respondWith(
-	fetch(event.request).then(
-		function (response)
+	event.respondWith(async function()
+	{
+		// Maybe it's mid-download?
+		const bgFetch = await registration.backgroundFetch.get('my-fetch');
+		if (bgFetch)
 		{
-			let responseClone = response.clone();	
-			caches.open(CACHE_NAME).then(function (cache)
-			{
-			  cache.put(event.request, responseClone);
-			});
-			return response;
-		},
-		function (reject)
-		{
-			  return caches.match(event.request).then(
-			  function(response)
-			  {
-				if (response !== undefined)
-				   return response;
-				else
-				   return new Response('You are offline!');
-			  });
+			const record = await bgFetch.match(event.request);
+			if (record) return record.responseReady;
+		}
 
-		})
-	);
+		try
+		{
+			let response = await fetch(event.request);
+			let responseClone = response.clone();
+			let cache = await caches.open(CACHE_NAME);
+			cache.put(event.request, responseClone);
+			return response;
+		}
+		catch(exp)
+		{
+		}
+		let response = caches.match(event.request);
+		if (response !== undefined)
+		   return response;
+		else
+		   return new Response('You are offline!');	
+	}());
+});
+
+
+// background fetch handlers
+self.addEventListener('backgroundfetchsuccess', (event) => 
+{
+  event.waitUntil(async function()
+  {
+    const bgFetch = event.registration;
+    const cache = await caches.open('downloads'); // Create/open a cache.
+    const records = await bgFetch.matchAll(); // Get all the records.
+    const promises = records.map(async (record) => 
+	{
+      const response = await record.responseReady;  // Copy each request/response across.
+      await cache.put(record.request, response);
+    });
+
+    await Promise.all(promises);  // Wait for the copying to complete.
+    event.updateUI({ title: 'Episode 5 ready to listen!' });  // Update the progress notification.
+  }());
+});
+
+addEventListener('backgroundfetchfail', (event) => {
+
+});
+
+addEventListener('backgroundfetchabort', (event) => {
+
+});
+ 
+
+self.addEventListener('backgroundfetchclick', (event) => {
+  const bgFetch = event.registration;
+
+  if (bgFetch.result === 'success')
+  {
+    clients.openWindow('https://www.google.com');
+  }
+  else
+  {
+    clients.openWindow('https://www.yandex.com');
+  }
 });
 
 
 // notification handlers
 self.addEventListener('notificationclose', function(e)
 {
-  var notification = e.notification;
-  var primaryKey = notification.data.primaryKey;
+	var notification = e.notification;
+	var primaryKey = notification.data.primaryKey;
 
-  console.log('Closed notification: ' + primaryKey);
+	console.log('Closed notification: ' + primaryKey);
 });
 
 self.addEventListener('notificationclick', function(e)
 {
-  var notification = e.notification;
-  var primaryKey = notification.data.primaryKey;
-  var action = e.action;
+	var notification = e.notification;
+	var primaryKey = notification.data.primaryKey;
+	var action = e.action;
 
-  if (action === 'close')
-  {
-    notification.close();
-  }
-  else
-  {
-    clients.openWindow('http://www.google.com');
-    notification.close();
-  }
+	if (action === 'close')
+	{
+		notification.close();
+	}
+	else
+	{
+		clients.openWindow('http://www.google.com');
+		notification.close();
+	}
 });
