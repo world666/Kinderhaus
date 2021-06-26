@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="fontawesome/css/all.css">
 		<link rel="stylesheet"  href="css/main.css">
-		<script src="js/navigation-0.0.1.js"></script>
+		<script src="js/navigation-0.0.3.js"></script>
 	</head>
 	<body>
 		<div class="row" style="background-color: #aaa; margin:0">

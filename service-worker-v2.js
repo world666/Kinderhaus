@@ -1,7 +1,7 @@
 
 
 // fatch handlers
-var CACHE_NAME = 'service-worker-v1';
+var CACHE_NAME = 'service-worker-v2';
 
 self.addEventListener('install', (event) =>
 {
@@ -60,7 +60,7 @@ self.addEventListener('fetch', function(event)
 		catch(exp)
 		{
 		}
-		let response = caches.match(event.request);
+		let response = await caches.match(event.request);
 		if (response !== undefined)
 		   return response;
 		else

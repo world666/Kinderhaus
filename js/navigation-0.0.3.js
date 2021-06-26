@@ -262,7 +262,7 @@ function backgroundFetch()
 
 if ('serviceWorker' in navigator)
 {
-  navigator.serviceWorker.register('./service-worker-v1.js').then((reg) =>
+  navigator.serviceWorker.register('./service-worker-v2.js').then((reg) =>
   {
     console.log('Registration succeeded. Scope is ' + reg.scope);
   }).catch((error) =>
