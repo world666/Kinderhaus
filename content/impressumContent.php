@@ -18,10 +18,10 @@
 		</dd>
 		
 		<dt style="text-align: left;">Vorstand</dt>
-		<dd>Ina Knierim, Doreen Meyer</dd>
+		<dd>Ina Knierim, Sandra Dufke</dd>
 		
 		<dt style="text-align: left;">Kassenwart</dt>
-		<dd>Ute Ferrara</dd>
+		<dd>Jens Stammkötter</dd>
 		
 		<dt style="text-align: left;">Seitenverantwortlich</dt>
 		<dd>
