@@ -16,6 +16,14 @@
 		<link rel="stylesheet" href="fontawesome/css/all.css">
 		<link rel="stylesheet"  href="css/main.css">
 		<script src="js/navigation-0.0.3.js"></script>
+		<script type="application/ld+json">
+		{"@context" : "http://schema.org",
+		 "@type" : "Organization",  
+		  "name" : "Kinderhaus",
+		  "url" : "https://kinderhaus-hersfeld.de/",
+		  "image" : "https://kinderhaus-hersfeld.de/img/logo.png",
+		  "logo": "https://kinderhaus-hersfeld.de/img/logo.png" }
+		</script>
 	</head>
 	<body>
 		<div class="row" style="background-color: #aaa; margin:0">
