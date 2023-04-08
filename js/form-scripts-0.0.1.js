@@ -12,12 +12,10 @@ $("#contactForm").validator().on("submit", function (event){
 
 
 function submitForm()
-{
-    // Initiate Variables With Form Content
+{   // Initiate Variables With Form Content
     var name = $("#name").val();
     var email = $("#email").val();
     var message = $("#message").val();
-
 	submitMSG(true, "Ihre Nachricht wird gesendet...");
     $.ajax({
         type: "POST",
@@ -26,13 +24,9 @@ function submitForm()
         success : function(text)
 		{
             if (text.includes("gesendet"))
-			{
 				submitMSG(true, text);
-            } 
 			else
-			{
                 submitMSG(false, text);
-            }
         }
     });
 }
@@ -40,12 +34,8 @@ function submitForm()
 function submitMSG(valid, msg)
 {
     if(valid)
-	{
         var msgClasses = "h_message tada text-success";
-    }
 	else
-	{
         var msgClasses = "h_message text-danger_own";
-    }
     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 }

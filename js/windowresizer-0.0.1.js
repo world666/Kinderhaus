@@ -1,6 +1,8 @@
-$(document).ready(function () {
+$(document).ready(function()
+{
     updateContainer();
-    $(window).resize(function() {
+    $(window).resize(function()
+	{
         updateContainer();
     });
 });

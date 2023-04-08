@@ -1,52 +1,36 @@
-
-
 // fatch handlers
 var CACHE_NAME = 'service-worker-v2';
-
 self.addEventListener('install', (event) =>
 {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) =>
+	event.waitUntil(caches.open(CACHE_NAME).then((cache) =>
 	{
-      return cache.addAll([
-        './img/header.jpg',
-        './img/logo.png',
-        './img/main.png'
-      ]);
-    })
-  );
+		return cache.addAll(['./img/header.jpg', './img/logo.png', './img/main.png']);
+	}));
 });
 
 self.addEventListener('activate', function(event)
 {
-  var cacheAllowlist = [CACHE_NAME];
-
-  event.waitUntil(
-    caches.keys().then(function(cacheNames)
+	var cacheAllowlist = [CACHE_NAME];
+	event.waitUntil(caches.keys().then(function(cacheNames)
 	{
-      return Promise.all(
-        cacheNames.map(function(cacheName)
+		return Promise.all(cacheNames.map(function(cacheName)
 		{
-          if (cacheAllowlist.indexOf(cacheName) === -1)
-		  {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
+			if (cacheAllowlist.indexOf(cacheName) === -1)
+				return caches.delete(cacheName);
+        }));
+    }));
 });
 
 self.addEventListener('fetch', function(event)
 {
 	event.respondWith(async function()
 	{
-		// Maybe it's mid-download?
-		const bgFetch = await registration.backgroundFetch.get('my-fetch');
+		const bgFetch = await registration.backgroundFetch.get('my-fetch'); // Maybe it's mid-download?
 		if (bgFetch)
 		{
 			const record = await bgFetch.match(event.request);
-			if (record) return record.responseReady;
+			if (record)
+				return record.responseReady;
 		}
 
 		try
@@ -63,11 +47,9 @@ self.addEventListener('fetch', function(event)
 		let response = await caches.match(event.request);
 		if (response !== undefined)
 		   return response;
-		else
-		   return new Response('You are offline!');	
+		return new Response('You are offline!');	
 	}());
 });
-
 
 // background fetch handlers
 self.addEventListener('backgroundfetchsuccess', (event) => 
@@ -79,44 +61,39 @@ self.addEventListener('backgroundfetchsuccess', (event) =>
     const records = await bgFetch.matchAll(); // Get all the records.
     const promises = records.map(async (record) => 
 	{
-      const response = await record.responseReady;  // Copy each request/response across.
+      const response = await record.responseReady; // Copy each request/response across.
       await cache.put(record.request, response);
     });
 
-    await Promise.all(promises);  // Wait for the copying to complete.
-    event.updateUI({ title: 'Episode 5 ready to listen!' });  // Update the progress notification.
+    await Promise.all(promises); // Wait for the copying to complete.
+    event.updateUI({ title: 'Episode 5 ready to listen!' }); // Update the progress notification.
   }());
 });
 
-addEventListener('backgroundfetchfail', (event) => {
+addEventListener('backgroundfetchfail', (event) =>
+{
 
 });
 
-addEventListener('backgroundfetchabort', (event) => {
+addEventListener('backgroundfetchabort', (event) =>
+{
 
 });
- 
 
-self.addEventListener('backgroundfetchclick', (event) => {
+self.addEventListener('backgroundfetchclick', (event) =>
+{
   const bgFetch = event.registration;
-
   if (bgFetch.result === 'success')
-  {
     clients.openWindow('https://www.google.com');
-  }
   else
-  {
     clients.openWindow('https://www.yandex.com');
-  }
 });
-
 
 // notification handlers
 self.addEventListener('notificationclose', function(e)
 {
 	var notification = e.notification;
 	var primaryKey = notification.data.primaryKey;
-
 	console.log('Closed notification: ' + primaryKey);
 });
 

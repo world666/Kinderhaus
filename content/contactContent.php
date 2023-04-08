@@ -31,7 +31,6 @@
 <br>
 <!--<div class="container pad_seite">
 	<h4>Wenn Sie Fragen haben, schreiben Sie uns eine Nachricht:</h4>
-	
 	<form role="form" id="contactForm" data-toggle="validator" class="shake">
 		<div class="row" style="padding-bottom: 0em;">
 			<div class="form-group col-md-6">

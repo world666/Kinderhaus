@@ -6,21 +6,19 @@ async function linkHandler(href, activeId)
 		let response = await fetch(url);
 		if (response.ok)
 		{ 
-		  let htmlText = await response.text();
-		  $("#content").html(htmlText);
-		  if(activeId != undefined)
-		  {
-			$(".navbar-nav li").removeClass("active");
-			$(activeId).addClass("active");
-			if($("#navButton").is(":visible"))
+			let htmlText = await response.text();
+			$("#content").html(htmlText);
+			if(activeId != undefined)
 			{
-				$("#navButton").click();
+				$(".navbar-nav li").removeClass("active");
+				$(activeId).addClass("active");
+				if($("#navButton").is(":visible"))
+					$("#navButton").click();
 			}
-		  }
 		} 
 		else
 		{
-		  alert("ERROR HTTP: " + response.status);
+			alert("ERROR HTTP: " + response.status);
 		}
 	}
 	catch(error)
@@ -54,12 +52,9 @@ function indexedDBExp()
 				break;
 			default: // client hase some old version
 				break;
-				
 	    }
-		if (!db.objectStoreNames.contains('books'))
-		{   // books doesn't exist
+		if (!db.objectStoreNames.contains('books')) // books doesn't exist
 			db.createObjectStore('books', {keyPath: 'id'}); // create books
-		}
 	};
 
 	openRequest.onerror = function()
@@ -110,15 +105,10 @@ function indexedDBExp()
 			readRequest.onsuccess = function()
 			{
 				if (readRequest.result !== undefined)
-				{
 					console.log("books:", readRequest.result);
-				}
 				else
-				{
 					console.log("no books");
-				}
-		};
-
+			};
 		};
 		request.onerror = function()
 		{
@@ -167,12 +157,9 @@ function notifyMe()
 			dateOfArrival: Date.now(),
 			primaryKey: 1
 		},
-		actions: [
-			{action: 'explore', title: 'Explore this new world',
-			 icon: 'ico/home144.png'},
-			{action: 'close', title: 'Close notification',
-	 	 	 icon: 'ico/home144.png'},
-		]
+		actions: [ {action: 'explore', title: 'Explore this new world', icon: 'ico/home144.png'},
+				   {action: 'close', title: 'Close notification', icon: 'ico/home144.png'},
+		         ]
 	};
 	if (!("Notification" in window)) // Let's check if the browser supports notifications
 	{
@@ -195,8 +182,9 @@ function notifyMe()
 				navigator.serviceWorker.getRegistration().then(function(reg)
 				{
 					reg.showNotification(new Notification("Hi there!"));
-			});
-		}});
+				});
+			}
+		});
 	}
 }
 
@@ -249,8 +237,8 @@ function backgroundFetch()
 				  
 				bgFetch.addEventListener('progress', () =>
 				{
-				  // If we didn't provide a total, we can't provide a %.
-				  if (!bgFetch.downloadTotal) return;
+				  if (!bgFetch.downloadTotal)  // If we didn't provide a total, we can't provide a %.
+					  return;
 
 				  const percent = Math.round(bgFetch.downloaded / bgFetch.downloadTotal * 100);
 				  console.log(`Download progress: ${percent}%`);
@@ -270,8 +258,6 @@ if ('serviceWorker' in navigator)
     console.log('Registration failed with ' + error);
   });
 }
-
-
 
 //backgroundFetch();
 //notifyMe();
