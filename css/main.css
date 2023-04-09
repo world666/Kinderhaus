@@ -93,7 +93,6 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #c9d72b
 	text-indent: -99999px;
 }
 
-
 .header-own{
 	 background-color: #fafafa;
 	 border-top: 1em solid #eeeeee;
@@ -203,9 +202,10 @@ dt{
 }
 */
 
- .leftimg {
+ .leftimg{
     float:left;
     margin: 7px 7px 7px 0;
+ }
 
 
 
