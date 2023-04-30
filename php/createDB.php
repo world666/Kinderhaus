@@ -65,7 +65,7 @@ function createAnswersTable($mysqli, $tableName)
 function createQuestionTokensTable($mysqli, $tableName)
 {
 	if (!$mysqli->query("CREATE TABLE `" . $tableName . "` ( `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT, 
-	                    `token` VARCHAR(256) NOT NULL,
+	                    `token` VARCHAR(256) NOT NULL, `active` BOOLEAN,
 						PRIMARY KEY (`id`)) ENGINE = InnoDB;"))
 	{
 		echo "<p>Table creation failed: (" . $mysqli->errno . ") " . $mysqli->error . "</p>";
@@ -118,7 +118,7 @@ else
 		echo "<p>Table 'answers' successfully created</p>";
 }
 
-//removeTable($mysqli, "answers");
+//removeTable($mysqli, "question_tokens");
 if (isTableExists($mysqli, "question_tokens"))
 {
 	echo "<p>Table 'question_tokens' already exists</p>";

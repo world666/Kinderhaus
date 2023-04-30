@@ -8,16 +8,23 @@
 	
 	if (!isset($_GET["token"]))
 	{
-		echo "token was not set";
+		echo "Error: token was not set";
 		die();
 	}
-
-	$result = $mysqli->query("SELECT 1 FROM `question_tokens` WHERE `token`='" . $_GET["token"] . "'");
+	
+	$token = $_GET["token"];
+	$result = $mysqli->query("SELECT `active` FROM `question_tokens` WHERE `token`='" . $token . "'");
 	if ($result->num_rows <= 0)
 	{
-		echo "token was not found";
+		echo "Error: token was not found";
 		die();
 	}
+	$row = $result->fetch_assoc();
+	if (!$row["active"])
+	{
+		echo "Error: token is not valid";
+		die();
+	}	
 	
 	$noParamsSet = TRUE;
 	$selectSql = "SELECT `id` FROM `questions`";
@@ -32,7 +39,7 @@
 				$noParamsSet = FALSE;
 				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `question_id`) VALUES (NULL, '" . $_POST[$paramName] . "', '" . $row["id"] . "')"))
 				{
-					echo "Test error";
+					echo "Error: data insertion error";
 					die();
 				}
 			}
@@ -41,12 +48,17 @@
 	
 	if (!$noParamsSet)
 	{
+		//"UPDATE MyGuests SET lastname='Doe' WHERE id=2"
+		if (!$mysqli->query("UPDATE `question_tokens` SET `active`='0' WHERE `token`='" . $token . "'"))
+		{
+			echo "Error: token update";
+			die();
+		}
 		echo "Test done";
 		$mysqli->close();
 		exit();
 	}
 	
-
 	$selectSql = "SELECT `id`, `question`, `answers` FROM `questions`";
 	$result = $mysqli->query($selectSql);
 	
