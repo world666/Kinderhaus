@@ -33,14 +33,17 @@
 	{
 		while($row = $result->fetch_assoc())
 		{
-			$paramName = "question" . $row["id"];
-			if (isset($_POST[$paramName]))
+			$paramNames = "question" . $row["id"];
+			if (isset($_POST[$paramNames]))
 			{
 				$noParamsSet = FALSE;
-				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `question_id`) VALUES (NULL, '" . $_POST[$paramName] . "', '" . $row["id"] . "')"))
+				foreach ($_POST[$paramNames] as $paramName)
 				{
-					echo "Error: data insertion error";
-					die();
+					if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `question_id`) VALUES (NULL, '" . $paramName . "', '" . $row["id"] . "')"))
+					{
+						echo "Error: data insertion error";
+						die();
+					}
 				}
 			}
 		}
@@ -48,7 +51,6 @@
 	
 	if (!$noParamsSet)
 	{
-		//"UPDATE MyGuests SET lastname='Doe' WHERE id=2"
 		if (!$mysqli->query("UPDATE `question_tokens` SET `active`='0' WHERE `token`='" . $token . "'"))
 		{
 			echo "Error: token update";
@@ -73,21 +75,37 @@
 
 			if ($row["answers"] != NULL)
 			{
-				$optionIndex = 0;
-				$options = explode("|", $row["answers"]);
-				foreach ($options as $option)
+				if (strpos($row["answers"], '|') !== false)
 				{
-					echo "<div class='radio'>";
-					echo "<label><input type='radio' value='" . $optionIndex . "' name='question" . $row["id"] . "'>" . $option . "</label>";
-					echo "</div>";
-					$optionIndex++;
+					$optionIndex = 0;
+					$options = explode("|", $row["answers"]);
+					foreach ($options as $option)
+					{
+						echo "<div class='radio'>";
+						echo "<label><input type='radio' value='" . $optionIndex . "' name='question" . $row["id"] . "[]'>&nbsp;" . $option . "</label>";
+						echo "</div>";
+						$optionIndex++;
+					}
+				}
+				else if (strpos($row["answers"], '&') !== false)
+				{
+					$optionIndex = 0;
+					$options = explode("&", $row["answers"]);
+					foreach ($options as $option)
+					{
+						
+						echo "<div class='checkbox'>";
+						echo "<label><input type='checkbox' value='" . $optionIndex . "' name='question" . $row["id"] . "[]'>&nbsp;" . $option . "</label>";
+						echo "</div>";
+						$optionIndex++;
+					}
 				}
 			}
 			else
 			{
 				echo "<div class='form-group'>";
 				echo "<label for='comment'>Comment:</label>";
-				echo "<textarea class='form-control' rows='5' name='question" . $row["id"] . "'></textarea>";
+				echo "<textarea class='form-control' rows='5' name='question" . $row["id"] . "[]'></textarea>";
 				echo "</div>";
 			}
 			echo "</div>";
