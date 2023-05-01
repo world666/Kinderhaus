@@ -4,11 +4,11 @@
 	
 	$mysqli = new mysqli($dbIPAddr, $dbUser, $dbPassword, $dnName);
 	if ($mysqli->connect_errno)
-		die("<p>Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error . "</p>");
+		die("<p>Verbindung zu MySQL fehlgeschlagen: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error . "</p>");
 	
 	if (!isset($_GET["token"]))
 	{
-		echo "Error: token was not set";
+		echo "Fehler: Token wurde nicht gesetzt";
 		die();
 	}
 	
@@ -16,13 +16,13 @@
 	$result = $mysqli->query("SELECT `active` FROM `question_tokens` WHERE `token`='" . $token . "'");
 	if ($result->num_rows <= 0)
 	{
-		echo "Error: token was not found";
+		echo "Fehler: Token wurde nicht gefunden";
 		die();
 	}
 	$row = $result->fetch_assoc();
 	if (!$row["active"])
 	{
-		echo "Error: token is not valid";
+		echo "Fehler: Token ist nicht mehr gültig";
 		die();
 	}	
 	
@@ -41,7 +41,7 @@
 				{
 					if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `question_id`) VALUES (NULL, '" . $paramName . "', '" . $row["id"] . "')"))
 					{
-						echo "Error: data insertion error";
+						echo "Fehler beim Einfügen der Daten";
 						die();
 					}
 				}
@@ -53,10 +53,10 @@
 	{
 		if (!$mysqli->query("UPDATE `question_tokens` SET `active`='0' WHERE `token`='" . $token . "'"))
 		{
-			echo "Error: token update";
+			echo "Fehler: Token-Update";
 			die();
 		}
-		echo "Test done";
+		echo "Test wurde erfolgreich durchgeführt";
 		$mysqli->close();
 		exit();
 	}
@@ -67,12 +67,12 @@
 	if ($result->num_rows > 0)
 	{
 		$questionNumber = 1;
-		echo "<form id='questions_form' method='POST'>";
+		echo "<div class='container pad_seite'>";
+		echo "<form class='form-horizontal' id='questions_form' method='POST'>";
 		while($row = $result->fetch_assoc())
 		{
-			echo "<div class='container pad_seite'>";
-			echo "<h4>" . $questionNumber++ . ". " . $row["question"] . "</h4>";
-
+			echo "<div class='form-group'>";
+			echo "<h5>" . $questionNumber++ . ". " . $row["question"] . "</h4>";
 			if ($row["answers"] != NULL)
 			{
 				if (strpos($row["answers"], '|') !== false)
@@ -81,8 +81,10 @@
 					$options = explode("|", $row["answers"]);
 					foreach ($options as $option)
 					{
+						echo "<div class='col-sm-offset-2 col-sm-10'>";
 						echo "<div class='radio'>";
 						echo "<label><input type='radio' value='" . $optionIndex . "' name='question" . $row["id"] . "[]'>&nbsp;" . $option . "</label>";
+						echo "</div>";
 						echo "</div>";
 						$optionIndex++;
 					}
@@ -94,8 +96,10 @@
 					foreach ($options as $option)
 					{
 						
+						echo "<div class='col-sm-offset-2 col-sm-10'>";
 						echo "<div class='checkbox'>";
 						echo "<label><input type='checkbox' value='" . $optionIndex . "' name='question" . $row["id"] . "[]'>&nbsp;" . $option . "</label>";
+						echo "</div>";
 						echo "</div>";
 						$optionIndex++;
 					}
@@ -103,15 +107,19 @@
 			}
 			else
 			{
-				echo "<div class='form-group'>";
-				echo "<label for='comment'>Comment:</label>";
+				echo "<div class='col-sm-offset-2 col-sm-10'>";
+				echo "<label class='control-label'>Antwort:</label>";
 				echo "<textarea class='form-control' rows='5' name='question" . $row["id"] . "[]'></textarea>";
 				echo "</div>";
 			}
 			echo "</div>";
 		}
-		echo "<button class='btn btn-default'>Senden</button>";
+		
+		echo "<div class='form-group'>";
+		echo "<button style='background-color: #14A54A;' type='submit' class='btn btn-default'>Senden</button>";
+		echo "</div>";
 		echo "</form>";
+		echo "</div>";
 	} 
 	else 
 	{
