@@ -41,7 +41,7 @@
 			<h5>3. Text Frage</h4>
 			<div class='col-sm-offset-2 col-sm-10'>
 				<label class='control-label'>Antwort:</label>
-				<textarea class='form-control' rows='5' name='question3[]'/>
+				<textarea class='form-control' rows='5' name='question3[]'></textarea>
 			</div>
 		</div>
 		<div class='form-group'>
