@@ -10,11 +10,13 @@
 	if ($questionsResult->num_rows > 0)
 	{
 		$questionNumber = 1;
+		echo "<div class='container pad_seite'>";
+		echo "<h2>Statistic</h2>";
+		echo "<br>";
 		while($question = $questionsResult->fetch_assoc())
 		{
-			echo "<div class='container pad_seite'>";
-			echo "<h4>" . $questionNumber++ . ". " . $question["question"] . "</h4>";
-
+			echo "<div class='form-group'>";
+			echo "<h5>" . $questionNumber++ . ". " . $question["question"] . "</h5>";
 			if ($question["answers"] != NULL)
 			{
 				if (strpos($question["answers"], '|') !== false)
@@ -24,7 +26,7 @@
 					foreach ($options as $option)
 					{
 						$answersResult = $mysqli->query("SELECT `answer` FROM `answers` WHERE `question_id`='" . $question["id"] . "' AND `answer`='" . $optionIndex ."'");
-						echo "<div class='container'>";
+						echo "<div class='col-sm-offset-2 col-sm-10'>";
 						echo "<label>" . $option . ": " . $answersResult->num_rows ."</label>";
 						echo "</div>";
 						$optionIndex++;
@@ -37,7 +39,7 @@
 					foreach ($options as $option)
 					{
 						$answersResult = $mysqli->query("SELECT `answer` FROM `answers` WHERE `question_id`='" . $question["id"] . "' AND `answer`='" . $optionIndex ."'");
-						echo "<div class='container'>";
+						echo "<div class='col-sm-offset-2 col-sm-10'>";
 						echo "<label>" . $option . ": " . $answersResult->num_rows ."</label>";
 						echo "</div>";
 						$optionIndex++;
@@ -50,15 +52,16 @@
 				$answerNumber = 1;
 				while($answer = $answersResult->fetch_assoc())
 				{
-					echo "<div class='container'>" . $answerNumber++ . ". " .  $answer["answer"]. "</div>";
+					echo "<div class='col-sm-offset-2 col-sm-10'>" . $answerNumber++ . ". " .  $answer["answer"]. "</div>";
 				}
 			}
 			echo "</div>";
 		}
+		echo "</div>";
 	} 
 	else 
 	{
-	  echo "Not found";
+	  echo "Nicht gefunden";
 	}
 ?>
 
