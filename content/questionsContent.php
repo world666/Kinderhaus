@@ -124,7 +124,7 @@
 	} 
 	else 
 	{
-	  echo "Not found";
+	  echo "Keine fragen gefunden";
 	}
 ?>
 
