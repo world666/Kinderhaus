@@ -68,11 +68,13 @@
 	{
 		$questionNumber = 1;
 		echo "<div class='container pad_seite'>";
-		echo "<form class='form-horizontal' id='questions_form' method='POST'>";
+		echo "<h2>Bitte beantworten Sie die folgenden Fragen</h2>";
+		echo "<br>";
+		echo "<form class='form-horizontal lead' id='questions_form' method='POST'>";
 		while($row = $result->fetch_assoc())
 		{
 			echo "<div class='form-group'>";
-			echo "<h5>" . $questionNumber++ . ". " . $row["question"] . "</h4>";
+			echo "<h5>" . $questionNumber++ . ". " . $row["question"] . "</h5>";
 			if ($row["answers"] != NULL)
 			{
 				if (strpos($row["answers"], '|') !== false)
@@ -107,16 +109,15 @@
 			}
 			else
 			{
-				echo "<div class='col-sm-offset-2 col-sm-10'>";
-				echo "<label class='control-label'>Antwort:</label>";
-				echo "<textarea class='form-control' rows='5' name='question" . $row["id"] . "[]'></textarea>";
+				echo "<div class='col-sm-offset-2 col-sm-10 text-field'>";
+				echo "<textarea class='form-control' rows='5' id='comment' name='question" . $row["id"] . "[]'></textarea>";
 				echo "</div>";
 			}
 			echo "</div>";
 		}
 		
 		echo "<div class='form-group'>";
-		echo "<button style='background-color: #14A54A;' type='submit' class='btn btn-default'>Senden</button>";
+		echo "<button style='margin-bottom: 2rem;' type='submit' class='btn btn-success'>Senden</button>";
 		echo "</div>";
 		echo "</form>";
 		echo "</div>";
