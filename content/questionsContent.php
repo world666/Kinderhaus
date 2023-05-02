@@ -85,7 +85,7 @@
 					{
 						echo "<div class='col-sm-offset-2 col-sm-10'>";
 						echo "<div class='radio'>";
-						echo "<label><input type='radio' value='" . $optionIndex . "' name='question" . $row["id"] . "[]'>&nbsp;" . $option . "</label>";
+						echo "<label><input type='radio' required value='" . $optionIndex . "' name='question" . $row["id"] . "[]'>&nbsp;" . $option . "</label>";
 						echo "</div>";
 						echo "</div>";
 						$optionIndex++;
@@ -117,7 +117,7 @@
 		}
 		
 		echo "<div class='form-group'>";
-		echo "<button style='margin-bottom: 2rem;' type='submit' class='btn btn-success'>Senden</button>";
+		echo "<button style='margin-bottom: 2rem;' type='submit' class='submit btn btn-success'>Senden</button>";
 		echo "</div>";
 		echo "</form>";
 		echo "</div>";
