@@ -250,13 +250,20 @@ function backgroundFetch()
 
 if ('serviceWorker' in navigator)
 {
-  navigator.serviceWorker.register('./service-worker-v2.js').then((reg) =>
+	navigator.serviceWorker.getRegistrations().then(function(registrations)
+	{
+		for(let registration of registrations)
+		{
+			registration.unregister();
+		} 
+	});
+  /*navigator.serviceWorker.register('./service-worker-v2.js').then((reg) =>
   {
     console.log('Registration succeeded. Scope is ' + reg.scope);
   }).catch((error) =>
   {
     console.log('Registration failed with ' + error);
-  });
+  });*/
 }
 
 //backgroundFetch();
