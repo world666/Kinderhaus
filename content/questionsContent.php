@@ -63,6 +63,7 @@
 	
 	$selectSql = "SELECT `id`, `question`, `answers` FROM `questions`";
 	$result = $mysqli->query($selectSql);
+	
 	if ($result->num_rows > 0)
 	{
 		$questionNumber = 1;
@@ -96,6 +97,7 @@
 					$options = explode("&", $row["answers"]);
 					foreach ($options as $option)
 					{
+						
 						echo "<div class='col-sm-offset-2 col-sm-10'>";
 						echo "<div class='checkbox'>";
 						echo "<label><input type='checkbox' value='" . $optionIndex . "' name='question" . $row["id"] . "[]'>&nbsp;" . $option . "</label>";
