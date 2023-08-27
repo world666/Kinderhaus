@@ -108,7 +108,6 @@ if ($mysqli->connect_errno)
 }
 echo "<p>Host Info: <b>" . $mysqli->host_info . "</b></p>";
 
-
 //removeTable($mysqli, "answers");
 //removeTable($mysqli, "question_answers");
 //removeTable($mysqli, "questions");

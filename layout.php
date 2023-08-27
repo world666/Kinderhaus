@@ -107,7 +107,7 @@
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/bootstrap-3.3.1.min.js"></script>
 		<script src="js/validator-3.3.1.min.js"></script>
-		<script src="js/windowresizer-0.0.1.js"></script>
+		<script src="js/windowresizer-0.0.2.js"></script>
 		<script src="js/navigation-0.0.4.js"></script>
    </body>
 </html>

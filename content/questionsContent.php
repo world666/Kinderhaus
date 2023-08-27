@@ -93,8 +93,8 @@
 	
 	function deactivateToken($mysqli, $token)
 	{
-		//if (!$mysqli->query("UPDATE `question_tokens` SET `active`='0' WHERE `token`='" . $token . "'"))
-		//	terminateWithError($mysqli, "Fehler: Token-Update");
+		if (!$mysqli->query("UPDATE `question_tokens` SET `active`='0' WHERE `token`='" . $token . "'"))
+			terminateWithError($mysqli, "Fehler: Token-Update");
 	}
 	
 	$mysqli = new mysqli($dbIPAddr, $dbUser, $dbPassword, $dnName);
@@ -120,7 +120,7 @@
 				$paramValue = $_POST["radio" . $row["id"]][0];
 				$answerText = "";
 				if (isset($_POST["radiotext" . $paramValue]))
-					$answerText = $_POST["radiotext" . $row["id"]][0];
+					$answerText = $_POST["radiotext" . $paramValue][0];
 				
 				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `answer_id`, `token`) VALUES (NULL, '" . $answerText . "', '" . $paramValue . "', '" . $token . "')"))
 					terminateWithError($mysqli, "Fehler beim Einfügen der Daten");

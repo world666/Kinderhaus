@@ -49,44 +49,6 @@
 					echo "<div class='col-sm-offset-2 col-sm-10'>" . $answerNumber++ . ". " .  $answer["answer"]. "</div>";
 				}
 			}
-			/*if ($question["answers"] != NULL)
-			{
-				if (strpos($question["answers"], '|') !== false)
-				{
-					$optionIndex = 0;
-					$options = explode("|", $question["answers"]);
-					foreach ($options as $option)
-					{
-						$answersResult = $mysqli->query("SELECT `answer` FROM `answers` WHERE `question_id`='" . $question["id"] . "' AND `answer`='" . $optionIndex ."'");
-						echo "<div class='col-sm-offset-2 col-sm-10'>";
-						echo "<label>" . $option . ": " . $answersResult->num_rows ."</label>";
-						echo "</div>";
-						$optionIndex++;
-					}
-				}
-				else if (strpos($question["answers"], '&') !== false)
-				{
-					$optionIndex = 0;
-					$options = explode("&", $question["answers"]);
-					foreach ($options as $option)
-					{
-						$answersResult = $mysqli->query("SELECT `answer` FROM `answers` WHERE `question_id`='" . $question["id"] . "' AND `answer`='" . $optionIndex ."'");
-						echo "<div class='col-sm-offset-2 col-sm-10'>";
-						echo "<label>" . $option . ": " . $answersResult->num_rows ."</label>";
-						echo "</div>";
-						$optionIndex++;
-					}
-				}
-			}
-			else
-			{
-				$answersResult = $mysqli->query("SELECT `answer` FROM `answers` WHERE `question_id`='" . $question["id"] . "'");
-				$answerNumber = 1;
-				while($answer = $answersResult->fetch_assoc())
-				{
-					echo "<div class='col-sm-offset-2 col-sm-10'>" . $answerNumber++ . ". " .  $answer["answer"]. "</div>";
-				}
-			}*/
 			echo "</div>";
 		}
 		echo "</div>";
