@@ -65,7 +65,7 @@ function createQuestionsTable($mysqli, $tableName)
 function createQuestionAnswersTable($mysqli, $tableName)
 {
 	if (!$mysqli->query("CREATE TABLE `" . $tableName . "` ( `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-	                    `answer` VARCHAR(4096) NOT NULL, `text_field` TINYINT UNSIGNED DEFAULT 0, `question_id` INT UNSIGNED,
+	                    `answer` VARCHAR(4096), `text_field` TINYINT UNSIGNED DEFAULT 0, `question_id` INT UNSIGNED,
 						PRIMARY KEY (`id`),
 						FOREIGN KEY (`question_id`) REFERENCES `questions`(`id`) ON DELETE CASCADE) ENGINE = InnoDB;"))
 	{
@@ -78,7 +78,7 @@ function createQuestionAnswersTable($mysqli, $tableName)
 function createAnswersTable($mysqli, $tableName)
 {
 	if (!$mysqli->query("CREATE TABLE `" . $tableName . "` ( `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT, 
-	                    `answer` VARCHAR(4096), `answer_id` INT UNSIGNED DEFAULT NULL, `token` VARCHAR(256) NOT NULL,
+	                    `answer` VARCHAR(4096), `answer_id` INT UNSIGNED NOT NULL, `token` VARCHAR(256) NOT NULL,
 						PRIMARY KEY (`id`),
 						FOREIGN KEY (`answer_id`) REFERENCES `question_answers`(`id`) ON DELETE CASCADE) ENGINE = InnoDB;"))
 	{

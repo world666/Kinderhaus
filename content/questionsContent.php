@@ -18,8 +18,10 @@
 				echo "<h5>" . $questionNumber++ . ". " . $questionsRow["question"] . "</h5>";
 				if ($questionsRow["question_type_id"] == 3) // 3 - text answer
 				{
+					$answersResult = $mysqli->query("SELECT `id`, `answer`, `text_field` FROM `question_answers` WHERE `question_id`='" . $questionsRow["id"] . "'");
+					$answersRow = $answersResult->fetch_assoc();
 					echo "<div class='col-sm-offset-2 col-sm-10 text-field'>";
-					echo "<textarea class='form-control' rows='5' id='comment' name='text" . $questionsRow["id"] . "[]'></textarea>";
+					echo "<textarea class='form-control' rows='5' id='comment' name='text" . $answersRow["id"] . "[]'></textarea>";
 					echo "</div>";
 				}
 				else
@@ -117,22 +119,10 @@
 				
 				$paramValue = $_POST["radio" . $row["id"]][0];
 				$answerText = "";
-				if (isset($_POST["radiotext" . $row["id"]]))
+				if (isset($_POST["radiotext" . $paramValue]))
 					$answerText = $_POST["radiotext" . $row["id"]][0];
 				
 				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `answer_id`, `token`) VALUES (NULL, '" . $answerText . "', '" . $paramValue . "', '" . $token . "')"))
-					terminateWithError($mysqli, "Fehler beim Einfügen der Daten");
-			}
-			
-			if (isset($_POST["text" . $row["id"]]))
-			{
-				if ($noParamsSet)
-				{
-					deactivateToken($mysqli, $token);
-					$noParamsSet = FALSE;
-				}
-				$paramValue = $_POST["text" . $row["id"]][0];	
-				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `token`) VALUES (NULL, '" . $paramValue . "', '" . $token . "')"))
 					terminateWithError($mysqli, "Fehler beim Einfügen der Daten");
 			}
 		}
@@ -159,6 +149,19 @@
 					$answerText = $_POST["checktext" . $row["id"]][0];
 				
 				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `answer_id`, `token`) VALUES (NULL, '" . $answerText . "', '" . $row["id"] . "', '" . $token . "')"))
+					terminateWithError($mysqli, "Fehler beim Einfügen der Daten");
+			}
+			else if (isset($_POST["text" . $row["id"]]))
+			{
+				if ($noParamsSet)
+				{
+					deactivateToken($mysqli, $token);
+					$noParamsSet = FALSE;
+				}
+				$paramValue = $_POST["text" . $row["id"]][0];
+				if ($paramValue == "")
+					continue;
+				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `answer_id`, `token`) VALUES (NULL, '" . $paramValue . "', '" . $row["id"] . "', '" . $token . "')"))
 					terminateWithError($mysqli, "Fehler beim Einfügen der Daten");
 			}
 		}
