@@ -15,8 +15,6 @@
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="fontawesome/css/all.css">
 		<link rel="stylesheet"  href="css/main.css">
-		<script src="js/navigation-0.0.4.js"></script>
-		<script src="js/validator-3.3.1.min.js"></script>
 		<script type="application/ld+json">
 		{"@context" : "http://schema.org",
 		 "@type" : "Organization",  
@@ -108,6 +106,8 @@
 
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/bootstrap-3.3.1.min.js"></script>
+		<script src="js/validator-3.3.1.min.js"></script>
 		<script src="js/windowresizer-0.0.1.js"></script>
+		<script src="js/navigation-0.0.4.js"></script>
    </body>
 </html>

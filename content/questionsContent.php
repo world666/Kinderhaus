@@ -2,130 +2,175 @@
 	set_include_path("../php" . PATH_SEPARATOR . "php");
 	include 'visitorsControl.php';
 	
+	function displayQuestions($mysqli)
+	{
+		$questionsResult = $mysqli->query("SELECT `id`, `question`, `question_type_id` FROM `questions`");
+		if ($questionsResult->num_rows > 0)
+		{
+			$questionNumber = 1;
+			echo "<div class='container pad_seite'>";
+			echo "<h2>Bitte beantworten Sie die folgenden Fragen</h2>";
+			echo "<br>";
+			echo "<form class='form-horizontal lead' id='questions_form' method='POST'>";
+			while($questionsRow = $questionsResult->fetch_assoc())
+			{
+				echo "<div class='form-group'>";
+				echo "<h5>" . $questionNumber++ . ". " . $questionsRow["question"] . "</h5>";
+				if ($questionsRow["question_type_id"] == 3) // 3 - text answer
+				{
+					echo "<div class='col-sm-offset-2 col-sm-10 text-field'>";
+					echo "<textarea class='form-control' rows='5' id='comment' name='text" . $questionsRow["id"] . "[]'></textarea>";
+					echo "</div>";
+				}
+				else
+				{
+					$answersResult = $mysqli->query("SELECT `id`, `answer`, `text_field` FROM `question_answers` WHERE `question_id`='" . $questionsRow["id"] . "'");
+					while($answersRow = $answersResult->fetch_assoc())
+					{
+						if ($questionsRow["question_type_id"] == 1) // 1 - radio
+						{ 
+							echo "<div class='col-sm-offset-2 col-sm-10'>";
+							echo "<div class='radio'>";
+							echo "<label><input type='radio'";
+							echo "        required value='" . $answersRow["id"] . "' name='radio" . $questionsRow["id"] . "[]'>&nbsp;" . $answersRow["answer"] . "</label>";
+							if ($answersRow["text_field"])
+								echo "<textarea class='form-control' style='display:none;' rows='5' id='comment' name='radiotext" . $answersRow["id"] . "[]'></textarea>";
+							echo "</div>";
+							echo "</div>";
+						}
+						else if ($questionsRow["question_type_id"] == 2) // 2 - checkbox
+						{
+							echo "<div class='col-sm-offset-2 col-sm-10'>";
+							echo "<div class='checkbox'>";
+							echo "<label><input type='checkbox' onclick='handleClick(this);'";
+							echo "        value='true' name='check" . $answersRow["id"] . "[]'>&nbsp;" . $answersRow["answer"] . "</label>";
+							if ($answersRow["text_field"])
+								echo "<textarea class='form-control' style='display:none;' rows='5' id='comment' name='checktext" . $answersRow["id"] . "[]'></textarea>";
+							echo "</div>";
+							echo "</div>";
+						}
+					}
+				}
+				echo "</div>";
+			}
+			
+			echo "<div class='form-group'>";
+			echo "<button style='margin-bottom: 2rem;' type='submit' class='submit btn btn-success'>Senden</button>";
+			echo "</div>";
+			echo "</form>";
+			echo "</div>";
+		} 
+		else 
+		{
+		  echo "Keine fragen gefunden";
+		}
+	}
+	
+	function checkAndReturnToken($mysqli)
+	{
+		if (!isset($_GET["token"]))
+			die("Fehler: Token wurde nicht gesetzt");
+	
+		$token = $_GET["token"];
+		$result = $mysqli->query("SELECT `active` FROM `question_tokens` WHERE `token`='" . $token . "'");
+		if ($result->num_rows <= 0)
+			die("Fehler: Token wurde nicht gefunden");
+		
+		$row = $result->fetch_assoc();
+		if (!$row["active"])
+			die("Fehler: Token ist nicht mehr gültig");
+		
+		return $token;
+	}
+	
+	function terminateWithError($mysqli, $text)
+	{
+		$mysqli->close();
+		die($text);
+	}
+	
+	function deactivateToken($mysqli, $token)
+	{
+		//if (!$mysqli->query("UPDATE `question_tokens` SET `active`='0' WHERE `token`='" . $token . "'"))
+		//	terminateWithError($mysqli, "Fehler: Token-Update");
+	}
+	
 	$mysqli = new mysqli($dbIPAddr, $dbUser, $dbPassword, $dnName);
 	if ($mysqli->connect_errno)
-		die("<p>Verbindung zu MySQL fehlgeschlagen: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error . "</p>");
+		die("Verbindung zu MySQL fehlgeschlagen: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error . "");
 	
-	if (!isset($_GET["token"]))
-	{
-		echo "Fehler: Token wurde nicht gesetzt";
-		die();
-	}
-	
-	$token = $_GET["token"];
-	$result = $mysqli->query("SELECT `active` FROM `question_tokens` WHERE `token`='" . $token . "'");
-	if ($result->num_rows <= 0)
-	{
-		echo "Fehler: Token wurde nicht gefunden";
-		die();
-	}
-	$row = $result->fetch_assoc();
-	if (!$row["active"])
-	{
-		echo "Fehler: Token ist nicht mehr gültig";
-		die();
-	}	
+	$token = checkAndReturnToken($mysqli);
 	
 	$noParamsSet = TRUE;
-	$selectSql = "SELECT `id` FROM `questions`";
-	$result = $mysqli->query($selectSql);
+	$result = $mysqli->query("SELECT `id` FROM `questions`");
 	if ($result->num_rows > 0)
 	{
 		while($row = $result->fetch_assoc())
 		{
-			$paramNames = "question" . $row["id"];
-			if (isset($_POST[$paramNames]))
+			if (isset($_POST["radio" . $row["id"]]))
 			{
-				$noParamsSet = FALSE;
-				foreach ($_POST[$paramNames] as $paramName)
+				if ($noParamsSet)
 				{
-					if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `question_id`) VALUES (NULL, '" . $paramName . "', '" . $row["id"] . "')"))
-					{
-						echo "Fehler beim Einfügen der Daten";
-						die();
-					}
+					deactivateToken($mysqli, $token);
+					$noParamsSet = FALSE;
 				}
+				
+				$paramValue = $_POST["radio" . $row["id"]][0];
+				$answerText = "";
+				if (isset($_POST["radiotext" . $row["id"]]))
+					$answerText = $_POST["radiotext" . $row["id"]][0];
+				
+				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `answer_id`, `token`) VALUES (NULL, '" . $answerText . "', '" . $paramValue . "', '" . $token . "')"))
+					terminateWithError($mysqli, "Fehler beim Einfügen der Daten");
+			}
+			
+			if (isset($_POST["text" . $row["id"]]))
+			{
+				if ($noParamsSet)
+				{
+					deactivateToken($mysqli, $token);
+					$noParamsSet = FALSE;
+				}
+				$paramValue = $_POST["text" . $row["id"]][0];	
+				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `token`) VALUES (NULL, '" . $paramValue . "', '" . $token . "')"))
+					terminateWithError($mysqli, "Fehler beim Einfügen der Daten");
+			}
+		}
+	}
+	
+	$result = $mysqli->query("SELECT `id` FROM `question_answers`");
+	if ($result->num_rows > 0)
+	{
+		while($row = $result->fetch_assoc())
+		{
+			if (isset($_POST["check" . $row["id"]]))
+			{
+				if ($noParamsSet)
+				{
+					deactivateToken($mysqli, $token);
+					$noParamsSet = FALSE;
+				}
+				$paramValue = $_POST["check" . $row["id"]][0];
+				if ($paramValue != TRUE)
+					continue;
+
+				$answerText = "";
+				if (isset($_POST["checktext" . $row["id"]]))
+					$answerText = $_POST["checktext" . $row["id"]][0];
+				
+				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `answer_id`, `token`) VALUES (NULL, '" . $answerText . "', '" . $row["id"] . "', '" . $token . "')"))
+					terminateWithError($mysqli, "Fehler beim Einfügen der Daten");
 			}
 		}
 	}
 	
 	if (!$noParamsSet)
 	{
-		if (!$mysqli->query("UPDATE `question_tokens` SET `active`='0' WHERE `token`='" . $token . "'"))
-		{
-			echo "Fehler: Token-Update";
-			die();
-		}
+
 		echo "Test wurde erfolgreich durchgeführt";
 		$mysqli->close();
 		exit();
 	}
 	
-	$selectSql = "SELECT `id`, `question`, `answers` FROM `questions`";
-	$result = $mysqli->query($selectSql);
-	
-	if ($result->num_rows > 0)
-	{
-		$questionNumber = 1;
-		echo "<div class='container pad_seite'>";
-		echo "<h2>Bitte beantworten Sie die folgenden Fragen</h2>";
-		echo "<br>";
-		echo "<form class='form-horizontal lead' id='questions_form' method='POST'>";
-		while($row = $result->fetch_assoc())
-		{
-			echo "<div class='form-group'>";
-			echo "<h5>" . $questionNumber++ . ". " . $row["question"] . "</h5>";
-			if ($row["answers"] != NULL)
-			{
-				if (strpos($row["answers"], '|') !== false)
-				{
-					$optionIndex = 0;
-					$options = explode("|", $row["answers"]);
-					foreach ($options as $option)
-					{
-						echo "<div class='col-sm-offset-2 col-sm-10'>";
-						echo "<div class='radio'>";
-						echo "<label><input type='radio' required value='" . $optionIndex . "' name='question" . $row["id"] . "[]'>&nbsp;" . $option . "</label>";
-						echo "</div>";
-						echo "</div>";
-						$optionIndex++;
-					}
-				}
-				else if (strpos($row["answers"], '&') !== false)
-				{
-					$optionIndex = 0;
-					$options = explode("&", $row["answers"]);
-					foreach ($options as $option)
-					{
-						
-						echo "<div class='col-sm-offset-2 col-sm-10'>";
-						echo "<div class='checkbox'>";
-						echo "<label><input type='checkbox' value='" . $optionIndex . "' name='question" . $row["id"] . "[]'>&nbsp;" . $option . "</label>";
-						echo "</div>";
-						echo "</div>";
-						$optionIndex++;
-					}
-				}
-			}
-			else
-			{
-				echo "<div class='col-sm-offset-2 col-sm-10 text-field'>";
-				echo "<textarea class='form-control' rows='5' id='comment' name='question" . $row["id"] . "[]'></textarea>";
-				echo "</div>";
-			}
-			echo "</div>";
-		}
-		
-		echo "<div class='form-group'>";
-		echo "<button style='margin-bottom: 2rem;' type='submit' class='submit btn btn-success'>Senden</button>";
-		echo "</div>";
-		echo "</form>";
-		echo "</div>";
-	} 
-	else 
-	{
-	  echo "Keine fragen gefunden";
-	}
+	displayQuestions($mysqli);
 ?>
-
- 

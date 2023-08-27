@@ -5,6 +5,14 @@ $(document).ready(function()
 	{
         updateContainer();
     });
+	
+	$('input[type="radio"]').on('change', function()
+	{
+		$('input[type="radio"]').each(function()
+		{
+			handleClick($(this).get(0));
+		});
+	});
 });
 function updateContainer() {
 	if($(".navbar-toggler").css("display") == "block")
@@ -21,3 +29,13 @@ function updateContainer() {
 		$(".navbar-brand").css("width", "35%");
 	}
 }
+
+function handleClick(cb)
+{
+	let parent = cb.parentElement;
+	let next = $(parent).next();
+	if (cb.checked)
+		$(next).show();
+	else
+		$(next).hide();
+};

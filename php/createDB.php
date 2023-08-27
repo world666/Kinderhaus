@@ -37,10 +37,37 @@ function createVisitorsTable($mysqli, $tableName)
 	return TRUE;
 }
 
+function createQuestionTypesTable($mysqli, $tableName)
+{
+	if (!$mysqli->query("CREATE TABLE `" . $tableName . "` ( `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	                    `question_type` VARCHAR(256) NOT NULL,
+						PRIMARY KEY (`id`)) ENGINE = InnoDB;"))
+	{
+		echo "<p>Table creation failed: (" . $mysqli->errno . ") " . $mysqli->error . "</p>";
+		return FALSE;
+	}
+	return TRUE;
+}
+
 function createQuestionsTable($mysqli, $tableName)
 {
 	if (!$mysqli->query("CREATE TABLE `" . $tableName . "` ( `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-	                    `question` VARCHAR(2048) NOT NULL, `answers` VARCHAR(4096), PRIMARY KEY (`id`)) ENGINE = InnoDB;"))
+	                    `question` VARCHAR(2048) NOT NULL, `question_type_id` INT UNSIGNED NOT NULL,
+						PRIMARY KEY (`id`),
+						FOREIGN KEY (`question_type_id`) REFERENCES `question_types`(`id`) ON DELETE CASCADE) ENGINE = InnoDB;"))
+	{
+		echo "<p>Table creation failed: (" . $mysqli->errno . ") " . $mysqli->error . "</p>";
+		return FALSE;
+	}
+	return TRUE;
+}
+
+function createQuestionAnswersTable($mysqli, $tableName)
+{
+	if (!$mysqli->query("CREATE TABLE `" . $tableName . "` ( `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	                    `answer` VARCHAR(4096) NOT NULL, `text_field` TINYINT UNSIGNED DEFAULT 0, `question_id` INT UNSIGNED,
+						PRIMARY KEY (`id`),
+						FOREIGN KEY (`question_id`) REFERENCES `questions`(`id`) ON DELETE CASCADE) ENGINE = InnoDB;"))
 	{
 		echo "<p>Table creation failed: (" . $mysqli->errno . ") " . $mysqli->error . "</p>";
 		return FALSE;
@@ -51,10 +78,9 @@ function createQuestionsTable($mysqli, $tableName)
 function createAnswersTable($mysqli, $tableName)
 {
 	if (!$mysqli->query("CREATE TABLE `" . $tableName . "` ( `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT, 
-	                    `answer` VARCHAR(4096), `question_id` INT UNSIGNED,
-						KEY `question_ind` (`question_id`),
+	                    `answer` VARCHAR(4096), `answer_id` INT UNSIGNED DEFAULT NULL, `token` VARCHAR(256) NOT NULL,
 						PRIMARY KEY (`id`),
-						FOREIGN KEY (`question_id`) REFERENCES `questions`(`id`) ON DELETE CASCADE) ENGINE = InnoDB;"))
+						FOREIGN KEY (`answer_id`) REFERENCES `question_answers`(`id`) ON DELETE CASCADE) ENGINE = InnoDB;"))
 	{
 		echo "<p>Table creation failed: (" . $mysqli->errno . ") " . $mysqli->error . "</p>";
 		return FALSE;
@@ -82,6 +108,12 @@ if ($mysqli->connect_errno)
 }
 echo "<p>Host Info: <b>" . $mysqli->host_info . "</b></p>";
 
+
+//removeTable($mysqli, "answers");
+//removeTable($mysqli, "question_answers");
+//removeTable($mysqli, "questions");
+//removeTable($mysqli, "question_types");
+
 //removeTable($mysqli, "visitors_index");
 if (isTableExists($mysqli, "visitors_index"))
 {
@@ -94,6 +126,18 @@ else
 		echo "<p>Table 'visitors_index' successfully created</p>";
 }
 
+//removeTable($mysqli, "question_types");
+if (isTableExists($mysqli, "question_types"))
+{
+	echo "<p>Table 'question_types' already exists</p>";
+}
+else
+{
+	echo "<p>Table 'question_types' not exists, create one</p>";
+	if (createQuestionTypesTable($mysqli, "question_types"))
+		echo "<p>Table 'question_types' successfully created</p>";
+}
+
 //removeTable($mysqli, "questions");
 if (isTableExists($mysqli, "questions"))
 {
@@ -103,6 +147,18 @@ else
 {
 	echo "<p>Table 'questions' not exists, create one</p>";
 	if (createQuestionsTable($mysqli, "questions"))
+		echo "<p>Table 'questions' successfully created</p>";
+}
+
+//removeTable($mysqli, "question_answers");
+if (isTableExists($mysqli, "question_answers"))
+{
+	echo "<p>Table 'question_answers' already exists</p>";
+}
+else
+{
+	echo "<p>Table 'question_answers' not exists, create one</p>";
+	if (createQuestionAnswersTable($mysqli, "question_answers"))
 		echo "<p>Table 'questions' successfully created</p>";
 }
 
