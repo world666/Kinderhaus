@@ -11,17 +11,17 @@
 			echo "<div class='container pad_seite'>";
 			echo "<h2>Bitte beantworten Sie die folgenden Fragen</h2>";
 			echo "<br>";
-			echo "<form class='form-horizontal lead' id='questions_form' method='POST'>";
+			echo "<form class='form-horizontal' id='questions_form' method='POST'>";
 			while($questionsRow = $questionsResult->fetch_assoc())
 			{
 				echo "<div class='form-group'>";
-				echo "<h5>" . $questionNumber++ . ". " . $questionsRow["question"] . "</h5>";
+				echo "<h4>" . $questionNumber++ . ". " . $questionsRow["question"] . "</h4>";
 				if ($questionsRow["question_type_id"] == 3) // 3 - text answer
 				{
 					$answersResult = $mysqli->query("SELECT `id`, `answer`, `text_field` FROM `question_answers` WHERE `question_id`='" . $questionsRow["id"] . "'");
 					$answersRow = $answersResult->fetch_assoc();
 					echo "<div class='col-sm-offset-2 col-sm-10 text-field'>";
-					echo "<textarea class='form-control' rows='5' id='comment' name='text" . $answersRow["id"] . "[]'></textarea>";
+					echo "<textarea style='font-size: 1.5em' class='form-control' rows='5' id='comment' name='text" . $answersRow["id"] . "[]'></textarea>";
 					echo "</div>";
 				}
 				else
@@ -33,7 +33,7 @@
 						{ 
 							echo "<div class='col-sm-offset-2 col-sm-10'>";
 							echo "<div class='radio'>";
-							echo "<label><input type='radio'";
+							echo "<label style='font-size: 1.5em'><input type='radio'";
 							echo "        required value='" . $answersRow["id"] . "' name='radio" . $questionsRow["id"] . "[]'>&nbsp;" . $answersRow["answer"] . "</label>";
 							if ($answersRow["text_field"])
 								echo "<textarea class='form-control' style='display:none;' rows='5' id='comment' name='radiotext" . $answersRow["id"] . "[]'></textarea>";
@@ -44,7 +44,7 @@
 						{
 							echo "<div class='col-sm-offset-2 col-sm-10'>";
 							echo "<div class='checkbox'>";
-							echo "<label><input type='checkbox' onclick='handleClick(this);'";
+							echo "<label style='font-size: 1.5em'><input type='checkbox' onclick='handleClick(this);'";
 							echo "        value='true' name='check" . $answersRow["id"] . "[]'>&nbsp;" . $answersRow["answer"] . "</label>";
 							if ($answersRow["text_field"])
 								echo "<textarea class='form-control' style='display:none;' rows='5' id='comment' name='checktext" . $answersRow["id"] . "[]'></textarea>";
@@ -71,16 +71,16 @@
 	function checkAndReturnToken($mysqli)
 	{
 		if (!isset($_GET["token"]))
-			die("Fehler: Token wurde nicht gesetzt");
+			die("<br><h2 style='color:red; text-align: center; width:100%'>Fehler: Token wurde nicht gesetzt</h2>");
 	
 		$token = $_GET["token"];
 		$result = $mysqli->query("SELECT `active` FROM `question_tokens` WHERE `token`='" . $token . "'");
 		if ($result->num_rows <= 0)
-			die("Fehler: Token wurde nicht gefunden");
+			die("<br><h2 style='color:red; text-align: center; width:100%'>Fehler: Token wurde nicht gefunden</h2>");
 		
 		$row = $result->fetch_assoc();
 		if (!$row["active"])
-			die("Fehler: Token ist nicht mehr gültig");
+			die("<br><h2 style='color:red; text-align: center; width:100%'>Fehler: Token ist nicht mehr gültig</h2>");
 		
 		return $token;
 	}
@@ -169,8 +169,7 @@
 	
 	if (!$noParamsSet)
 	{
-
-		echo "Test wurde erfolgreich durchgeführt";
+		echo "<br><h2 style='color:green; text-align: center; width:100%'>Die Umfrage erfolgreich durchgeführt</h2>";
 		$mysqli->close();
 		exit();
 	}

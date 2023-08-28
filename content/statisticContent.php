@@ -16,7 +16,7 @@
 		while($question = $questionsResult->fetch_assoc())
 		{
 			echo "<div class='form-group'>";
-			echo "<h5>" . $questionNumber++ . ". " . $question["question"] . "</h5>";
+			echo "<h4>" . $questionNumber++ . ". " . $question["question"] . "</h4>";
 			if ($question["question_type_id"] != 3)
 			{
 				$answersResult = $mysqli->query("SELECT question_answers.id, question_answers.answer, COUNT(question_answers.answer) AS count FROM ((questions
@@ -26,7 +26,7 @@
 			    while($answer = $answersResult->fetch_assoc())
 				{
 					echo "<div class='col-sm-offset-2 col-sm-10'>";
-					echo "<label>" . $answer["answer"] . ": " . $answer["count"] ."</label>";
+					echo "<label style='font-size: 1.5em'>" . $answer["answer"] . ": " . $answer["count"] ."</label>";
 					$textResults = $mysqli->query("SELECT answer FROM answers WHERE answer_id = " . $answer["id"] ."");
 					echo "<ul>";
 					while($text = $textResults->fetch_assoc())
@@ -46,7 +46,7 @@
 				$answerNumber = 1;
 				while($answer = $answersResult->fetch_assoc())
 				{
-					echo "<div class='col-sm-offset-2 col-sm-10'>" . $answerNumber++ . ". " .  $answer["answer"]. "</div>";
+					echo "<div style='font-size: 1.5em' class='col-sm-offset-2 col-sm-10'>" . $answerNumber++ . ". " .  $answer["answer"]. "</div>";
 				}
 			}
 			echo "</div>";
