@@ -122,8 +122,7 @@
 				if (isset($_POST["radiotext" . $paramValue]))
 					$answerText = $_POST["radiotext" . $paramValue][0];
 				
-				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `answer_id`, `token`) VALUES (NULL, '" . $answerText . "', '" . $paramValue . "', '" . $token . "')"))
-					terminateWithError($mysqli, "Fehler beim Einfügen der Daten");
+				$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `answer_id`, `token`) VALUES (NULL, '" . $answerText . "', '" . $paramValue . "', '" . $token . "')");
 			}
 		}
 	}
@@ -148,8 +147,7 @@
 				if (isset($_POST["checktext" . $row["id"]]))
 					$answerText = $_POST["checktext" . $row["id"]][0];
 				
-				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `answer_id`, `token`) VALUES (NULL, '" . $answerText . "', '" . $row["id"] . "', '" . $token . "')"))
-					terminateWithError($mysqli, "Fehler beim Einfügen der Daten");
+				$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `answer_id`, `token`) VALUES (NULL, '" . $answerText . "', '" . $row["id"] . "', '" . $token . "')");
 			}
 			else if (isset($_POST["text" . $row["id"]]))
 			{
@@ -161,8 +159,8 @@
 				$paramValue = $_POST["text" . $row["id"]][0];
 				if ($paramValue == "")
 					continue;
-				if (!$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `answer_id`, `token`) VALUES (NULL, '" . $paramValue . "', '" . $row["id"] . "', '" . $token . "')"))
-					terminateWithError($mysqli, "Fehler beim Einfügen der Daten");
+				
+				$mysqli->query("INSERT INTO `answers` (`id`, `answer`, `answer_id`, `token`) VALUES (NULL, '" . $paramValue . "', '" . $row["id"] . "', '" . $token . "')");
 			}
 		}
 	}
