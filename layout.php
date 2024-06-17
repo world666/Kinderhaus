@@ -97,7 +97,7 @@
 		<footer class="footer-own" style="padding: 1em 0 1em 0;">
 				<div class="container">
 					<p class="float-right" style="margin-bottom: 0;"><a class="footer_herf" href="#">Zurück nach oben</a></p>
-					<p style="margin-bottom: 0;"><span class="far fa-copyright"></span>  2017-2023 Das Kinderhaus, Hainstraße 10, 36251 Bad Hersfeld &middot;
+					<p style="margin-bottom: 0;"><span class="far fa-copyright"></span>  2017-2024 Das Kinderhaus, Hainstraße 10, 36251 Bad Hersfeld &middot;
 						<a class="footer_herf" href="javascript:linkHandler('content/impressumContent.php')">Impressum</a> &middot;
 						<a class="footer_herf" href="javascript:linkHandler('content/disclaimerContent.php')">Haftungsausschluss</a>
 					</p>
