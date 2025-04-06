@@ -18,10 +18,10 @@
 		</dd>
 		
 		<dt style="text-align: left;">Vorstand</dt>
-		<dd>Ina Knierim, Sandra Dufke</dd>
+		<dd>Peter Sauer, Andrii Kyrylov</dd>
 		
 		<dt style="text-align: left;">Kassenwart</dt>
-		<dd>Jens Stammkötter</dd>
+		<dd>Melanie Stammkötter</dd>
 		
 		<dt style="text-align: left;">Seitenverantwortlich</dt>
 		<dd>
