@@ -25,20 +25,5 @@
 		</div>
 	</div>	
 	<hr>
-	<div class = "row">	
-		<div class="col-md-12">
-		<br>
-			<h4>Kevin Seitz</h4>
-			<p class="p_own">Mein Name ist Kevin Seitz, geboren am 24.11.1989 und wohnhaft in Bad Hersfeld..
-			</p>
-			<p class="p_own">Im Sommer 2015 schloss ich meine Ausbildung zum staatlich anerkannten Erzieher ab und bin seit Oktober 2016 im Kinderhaus als Erzieher tätig.
-			</p>
-			<p class="p_own">Ich bin Erzieher geworden, da mir die Arbeit mit Kindern sehr viel Spaß macht und ich die Kinder auf ihren ersten außerhäuslichen Lebenswegen unterstützen, sowie ihre Stärken und Interessen fördern möchte.
-			</p>
-			<p class="p_own">In meiner Freizeit lese ich sehr gerne oder höre Musik.
-			</p>
-		</div>
-		</div>
-	</div>
 	<br>
 </div>
